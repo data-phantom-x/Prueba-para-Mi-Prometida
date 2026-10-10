@@ -1,0 +1,662 @@
+[
+    {
+        "q": "Ala de avión, diseñada para obtener una reacción, como la sustentación en el aire a través del cual se desplaza, se llama:",
+        "options": [
+            "Superficie alar.",
+            "Envergadura de las alas.",
+            "Perfil aerodinámico.",
+            "Ángulo de incidencia."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Cuando la temperatura ambiente y el punto de rocío se acercan sucede que:",
+        "options": [
+            "Se pueden formar nubes altas.",
+            "Se pueden formar nubes bajas.",
+            "No sucede nada.",
+            "Se puede formar niebla."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Donde ocurren los fenómenos meteorológicos y donde se realizan casi todos los vuelos de los aviones se denominan:",
+        "options": [
+            "Ionosfera.",
+            "Troposfera.",
+            "Tropopausa",
+            "Estratosfera."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Durante un vuelo recto y nivelado las fuerzas aerodinámicas que actúan sobre el avión permanecen:",
+        "options": [
+            "En desequilibrio y variable",
+            "Constantes y en equilibrio.",
+            "Variables y en equilibrio.",
+            "Constantes, pero en desequilibrio."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "El ángulo formado por el norte verdadero y el norte magnético se llama:",
+        "options": [
+            "Variación estacional.",
+            "Inclinación magnética.",
+            "Variación de rumbo.",
+            "Variación magnética."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "El cambio de huso horario se produce cada _____ grados de longitud.",
+        "options": [
+            "05.",
+            "10.",
+            "15.",
+            "20."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "El circulo máximo que pasa por el centro de la tierra y es perpendicular al eje de rotación de esta, se llama:",
+        "options": [
+            "Meridiano de Greenwich.",
+            "Paralelo.",
+            "Meridiano.",
+            "Ecuador."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "El empenaje está compuesto de un plano vertical y uno horizontal los que permiten mantener el avión controlado mediante:",
+        "options": [
+            "Alerones y flaps.",
+            "Timón de dirección y elevador.",
+            "Spoilers solamente.",
+            "Timón de profundidad y spoilers."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "El estado de la atmósfera en la que se producen corrientes irregulares en el flujo del aire, tanto en dirección como en intensidad, con remolinos, corrientes ascendentes y descendentes, se denomina:",
+        "options": [
+            "Viento racheado.",
+            "Frente inestable.",
+            "Turbulencia.",
+            "Inversión térmica."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "El hielo que se forma sobre las alas no afecta el rendimiento aerodinámico del vuelo.",
+        "options": [
+            "Disminuye la sustentación y aumenta la resistencia aerodinámica.",
+            "Aumenta la velocidad del avión y mejora el rendimiento.",
+            "Mejora la estabilidad y reduce el consumo de combustible.",
+            "Facilita el control del avión y mejora la maniobrabilidad."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "El ILS es un sistema que se usa para:",
+        "options": [
+            "Comunicarse con el ATC.",
+            "Para navegación en ruta.",
+            "Para efectuar aproximación y aterrizajes por instrumentos.",
+            "Para efectuar aterrizajes no instrumentales."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "El meridiano internacional del cambio de fecha es de:",
+        "options": [
+            "90°.",
+            "180°.",
+            "260°.",
+            "360°."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "El timón de dirección actúa a través del eje:",
+        "options": [
+            "Longitudinal.",
+            "Vertical.",
+            "Transversal o lateral.",
+            "Oblicuo."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "El timón de profundidad actúa a través del eje:",
+        "options": [
+            "Longitudinal.",
+            "Vertical.",
+            "Transversal o lateral.",
+            "Oblicuo."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "El valor standard de la presión a nivel del mar es de:",
+        "options": [
+            "29,92 pulgadas de mercurio a 15º C.",
+            "760 milímetros de mercurio a 15º C.",
+            "1.013,2 hectopascales a 15º C.",
+            "Todas las anteriores son correctas."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "¿Qué caracteriza al vuelo por instrumentos?",
+        "options": [
+            "El piloto vuela usando referencias visuales del terreno y el horizonte",
+            "El piloto controla la aeronave únicamente con la información de los instrumentos de vuelo.",
+            "El piloto vuela únicamente de día y con buen clima.",
+            "El piloto navega basándose en señales visuales externas, como luces de pista."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿Qué es el norte verdadero?",
+        "options": [
+            "La dirección hacia el polo norte magnético, donde apunta la brújula.",
+            "La dirección hacia el polo norte geográfico, basado en el eje de rotación de la tierra.",
+            "El punto donde el sol se oculta al atardecer.",
+            "La dirección hacia la ciudad más cercana al polo norte."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "En una ciudad ubicada sobre el meridiano 75º Oeste son las 12:00 horas LT la hora UTC será:",
+        "options": [
+            "14:00 horas.",
+            "15:00 horas.",
+            "16:00 horas.",
+            "17:00 horas."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "¿Qué acción producen los alerones en un avión?",
+        "options": [
+            "Controlan el movimiento de guiñada (izquierda y derecha).",
+            "Controlan el movimiento de cabeceo (arriba y abajo).",
+            "Controlan el movimiento de balanceo (inclinación lateral).",
+            "Controlan la velocidad del avión."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "La actitud de un avión se controla mediante:",
+        "options": [
+            "El indicador de posición.",
+            "El variómetro.",
+            "El horizonte artificial.",
+            "El compás magnético."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "La atmosfera seca para fines de fisiología de aviación, se considera que se encuentra formada por una mezcla de:",
+        "options": [
+            "Hidrógeno 78% nitrógeno 21% oxígeno 1%.",
+            "Nitrógeno 78% oxígeno 21% otros gases 1%.",
+            "Oxígeno 78% nitrógeno 21% otros gases 1%.",
+            "Oxígeno 78% hidrógeno 21% nitrógeno 1%."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "La ciencia que estudia las leyes que rigen el movimiento del aire y las reacciones que se originan sobre un cuerpo sólido en movimiento relativo respecto a éste, se denomina:",
+        "options": [
+            "Meteorología.",
+            "Física.",
+            "Metafísica.",
+            "Aerodinámica."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "La hora local de cualquier zona del mundo, se puede obtener conociendo su huso horario y aplicando el siguiente calculo:",
+        "options": [
+            "Si el huso horario es positivo, se suma a UTC y si negativo, se resta.",
+            "Si el huso horario es positivo, se resta a UTC y si es negativo, se suma.",
+            "Si el huso horario es positivo o negativo a UTC se suma.",
+            "Ninguna es correcta."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "¿Qué es la inversión térmica?",
+        "options": [
+            "Un aumento gradual de la temperatura con la altitud, que atrapa aire frío cerca del suelo.",
+            "Una disminución constante de la temperatura conforme se asciende en la atmósfera.",
+            "La formación de nubes en la capa más alta de la atmósfera.",
+            "El calentamiento del aire debido a la radiación solar directa."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "La latitud se mide:",
+        "options": [
+            "Hacia Norte o Sur y de 0º a 180º.",
+            "Hacia Este u Oeste y de 0º a 90º.",
+            "Hacia Norte o Sur y de 0º a 90º.",
+            "Hacia Este u Oeste y de 0º a 180º."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "¿Qué es la niebla?",
+        "options": [
+            "Un fenómeno meteorológico donde el aire está saturado de vapor de agua y reduce la visibilidad al nivel del suelo.",
+            "Un tipo de nube alta que no afecta la visibilidad.",
+            "Viento fuerte acompañado de polvo y arena.",
+            "Precipitación sólida en forma de pequeños cristales de hielo."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "¿Qué es la neblina?",
+        "options": [
+            "Una nube baja que reduce la visibilidad a menos de 1 KM.",
+            "Una suspensión de pequeñas gotas de agua en el aire que reduce la visibilidad entre 1 y 10 KM.",
+            "Un fenómeno de viento fuerte con polvo y arena.",
+            "Precipitación en forma de lluvia congelada."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "La nube gris y amorfa que produce lluvia o nevadas prolongadas se llama:",
+        "options": [
+            "Nimbo-estrato",
+            "Alto estratos.",
+            "Cúmulo nimbos.",
+            "Estratos cúmulos"
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Las coordenadas geográficas se expresan en:",
+        "options": [
+            "Metros, decímetros, centímetros.",
+            "Horas, minutos, segundos.",
+            "Grados, minutos, segundos.",
+            "Ninguna de las anteriores."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Las fuerzas que actúan en un avión en vuelo recto y nivelado son:",
+        "options": [
+            "Sustentación, peso, tracción y fuerza centrífuga.",
+            "Peso, sustentación y fuerza centrífuga.",
+            "Tracción, gravedad y fuerza centrífuga.",
+            "Sustentación, peso, tracción y resistencia."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "La situación de un punto en la tierra queda definido por:",
+        "options": [
+            "La latitud y la longitud.",
+            "Latitud norte sur y longitud este oeste.",
+            "Latitud este u oeste y longitud norte o sur.",
+            "Todas las anteriores son incorrectas."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Las líneas que en una carta meteorológica unen puntos de igual presión atmosférica se llaman:",
+        "options": [
+            "Isotérmicas.",
+            "Isotacas.",
+            "Isobaras.",
+            "Isogónicas."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "¿De qué se conforma una nube?",
+        "options": [
+            "De gotas de agua líquida, cristales de hielo o una mezcla de ambos suspendidos en la atmósfera.",
+            "De vapor de agua en estado gaseoso.",
+            "De partículas de polvo y gases tóxicos solamente.",
+            "De aire caliente en movimiento rápido."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Las superficies donde principalmente se genera sustentación son:",
+        "options": [
+            "Los controles de vuelo primarios.",
+            "Las alas.",
+            "Solo el empenaje.",
+            "Los flaps y slats."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "La técnica de planificar y efectuar un vuelo de manera de estar permanentemente ubicado con respecto al terreno siguiendo los rumbos correspondientes, se conoce como:",
+        "options": [
+            "Transporte aéreo.",
+            "Planificación de rutas.",
+            "Navegación aérea.",
+            "Técnicas aeronáuticas."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "La turbulencia es producida por:",
+        "options": [
+            "Corrientes convectivos, obstrucciones al flujo de aire y windshear.",
+            "Calentamiento de la masa de aire, proceso convectivo y causas mecánicas.",
+            "Enfriamiento de la masa de aire y aumento de la presión.",
+            "Acción de las masas de aire polar y tropical."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Los alerones actúan a través del eje:",
+        "options": [
+            "Longitudinal.",
+            "Vertical.",
+            "Transversal o lateral.",
+            "Oblicuo."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Los alerones son superficies de control ubicados en el borde de fuga de las alas y tienen como función:",
+        "options": [
+            "El control lateral del avión.",
+            "El control direccional del avión.",
+            "El control lateral del avión alrededor de su eje vertical.",
+            "Frenar el avión en vuelo."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Los controles de vuelo primarios son:",
+        "options": [
+            "Timón de dirección, flaps, elevadores.",
+            "Flaps, slats, spoilers.",
+            "Alerones, elevadores, timón de profundidad.",
+            "Timón de profundidad, timón de dirección, alerones."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Los controles que aumentan sustentación, permitiendo operaciones a distintas velocidades, se encuentran en:",
+        "options": [
+            "Los alerones.",
+            "Los flaps.",
+            "El timón de dirección.",
+            "El estabilizador horizontal."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Los dispositivos que destruyen la sustentación alar durante el aterrizaje se llaman:",
+        "options": [
+            "Flaps.",
+            "Spoilers.",
+            "Alerones.",
+            "Generadores de vórtice."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Los meridianos son círculos máximos que van de polo a polo y:",
+        "options": [
+            "Expresan longitud y se miden de 0 a 180°.",
+            "Expresan latitud y se miden de 0 a 180°.",
+            "Expresan longitud y se miden de 0 a 360°.",
+            "Expresan latitud y se miden de 0 a 360°."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Los paralelos son:",
+        "options": [
+            "Líneas imaginarias que van de polo a polo, usadas para medir la longitud.",
+            "Líneas imaginarias que van de este a oeste, usadas para medir la latitud.",
+            "Líneas reales que indican la trayectoria del sol.",
+            "Líneas que marcan las fronteras entre países."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Los tres ejes de rotación alrededor de los cuales se efectúan los movimientos del avión son:",
+        "options": [
+            "Eje vertical, lateral y longitudinal.",
+            "Eje vertical, transversal y horizontal.",
+            "Eje lateral, horizontal y transversal.",
+            "Eje lateral, longitudinal y horizontal."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Para medir la presión atmosférica existen dos tipos principales de barómetros, ¿cuáles son?",
+        "options": [
+            "Barómetro de mercurio y termómetro.",
+            "Barómetro aneroide y altímetro.",
+            "Anemómetro y barómetro de mercurio",
+            "Barómetro de mercurio y barómetro aneroide."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Para medir la velocidad del viento usamos un:",
+        "options": [
+            "Barógrafo.",
+            "Altímetro.",
+            "Veleta.",
+            "Anemómetro."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "¿Qué nube de las alternativas dadas representan un peligro inminente para la navegación aérea?",
+        "options": [
+            "Cirros.",
+            "Cirrustratos.",
+            "Estratocúmulos.",
+            "Cumulonimbus."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "¿Qué es la sustentación?",
+        "options": [
+            "La fuerza que impulsa al avión hacia adelante.",
+            "La resistencia del aire que frena el avance del avión.",
+            "La fuerza que permite al avión mantenerse en el aire, actuando perpendicular al flujo de aire.",
+            "El empuje generado por los motores de la aeronave."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Un frente meteorológico se define como:",
+        "options": [
+            "Una masa de aire cálido e inestable.",
+            "Superficie de discontinuidad entre dos masas de aire, de características diferentes.",
+            "Superficie de discontinuidad entre dos masas de aire, de iguales características.",
+            "Masa de aire frío que se desplaza cerca de la superficie del terreno."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Un grado de latitud es equivale a:",
+        "options": [
+            "60 millas statutas.",
+            "30 millas náuticas.",
+            "60 millas náuticas.",
+            "30 millas statutas."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Un stall se produce por:",
+        "options": [
+            "Cambio en la velocidad.",
+            "Un excesivo ángulo de ataque.",
+            "Pérdida de la resistencia.",
+            "Exceso de velocidad durante el ascenso."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿A qué se le denomina windshear?",
+        "options": [
+            "Cambio brusco en la velocidad y/o dirección del viento en un área pequeña.",
+            "Viento constante y suave en dirección fija.",
+            "Corriente de aire descendente causada por tormentas.",
+            "Viento que sopla únicamente en la estratósfera."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "¿Qué es el indicador de actitud?",
+        "options": [
+            "Un instrumento que muestra la altitud del avión respecto al nivel del mar.",
+            "Un instrumento que indica la velocidad del avión con respecto al aire.",
+            "Un instrumento que muestra la posición del avión en relación con el horizonte (cabeceo y alabeo).",
+            "Un indicador que muestra el rumbo magnético del avión."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "¿En meteorología, a qué se denomina \"techo\"?",
+        "options": [
+            "A la altura máxima que puede alcanzar una aeronave en vuelo.",
+            "A la distancia horizontal entre dos capas de nubes.",
+            "A la altura desde el suelo hasta la base de la capa más baja de nubes que cubre más del 50% del cielo.",
+            "A la capa más alta de la atmósfera donde se forman nubes."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "¿En qué unidad de medida se expresa la velocidad en aviación?",
+        "options": [
+            "Kilómetros por hora (KM/H).",
+            "Metros por segundo (M/S).",
+            "Nudos (KT).",
+            "Millas terrestres por hora (MPH)."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "¿Qué es un plan de vuelo?",
+        "options": [
+            "Un documento que registra el historial de mantenimiento del avión.",
+            "Un informe que detalla la ruta, altitud, tiempos y otros datos importantes que un piloto presenta antes de despegar.",
+            "Un mapa meteorológico que muestra las condiciones del tiempo.",
+            "Un sistema automático que controla el avión durante el vuelo."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿Qué condiciones pueden afectar un vuelo?",
+        "options": [
+            "Solo las condiciones meteorológicas y rendimiento del motor.",
+            "Condiciones meteorológicas, peso y balance del avión, y rendimiento del motor.",
+            "Únicamente la experiencia del piloto.",
+            "La cantidad de pasajeros a bordo."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿Qué es el punto de rocío?",
+        "options": [
+            "La velocidad a la que se mueve el viento",
+            "La temperatura a la cual el aire se satura y comienza a condensarse en forma de gotas de agua.",
+            "La altura de la base de las nubes.",
+            "La cantidad de vapor de agua en el aire."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿Por qué se produce una turbulencia?",
+        "options": [
+            "Por corrientes irregulares en el aire que causan cambios bruscos en velocidad y dirección.",
+            "Porque el avión aumenta su velocidad.",
+            "Debido a la alta presión atmosférica constante.",
+            "Por la falta de combustible en el avión."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "¿Qué es la aeronavegabilidad de una aeronave?",
+        "options": [
+            "La capacidad del avión para realizar vuelos largos sin repostar.",
+            "La condición que indica que una aeronave cumple con los requisitos técnicos y está en condiciones seguras para volar.",
+            "La velocidad máxima que puede alcanzar un avión.",
+            "El número de pasajeros que puede transportar una aeronave."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿En qué afecta la corriente en chorro a un vuelo?",
+        "options": [
+            "Aumenta o disminuye la velocidad del avión según la dirección del viento.",
+            "Mantener un avión en suspensión.",
+            "Afecta solo la presión dentro de la cabina.",
+            "Hace que el avión pierda altura automáticamente."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "¿Qué es la presión atmosférica?",
+        "options": [
+            "La temperatura del aire en la atmósfera.",
+            "La velocidad a la que se mueve el viento.",
+            "La cantidad de vapor de agua en el aire.",
+            "La fuerza que ejerce el aire sobre una superficie debido a su peso."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "¿En qué unidad se mide la presión atmosférica?",
+        "options": [
+            "Kilómetros por hora (KM/H)",
+            "Hectopascales (HPA) o milibares (MB)",
+            "Metros (M)",
+            "Grados Celsius (°C)"
+        ],
+        "answer": 1
+    },
+    {
+        "q": "A medida que aumenta la altitud, ¿qué sucede con la temperatura?",
+        "options": [
+            "La temperatura aumenta.",
+            "La temperatura permanece constante.",
+            "La temperatura disminuye.",
+            "La temperatura cambia de manera impredecible."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "¿Cuál es el efecto de la altitud en un vuelo?",
+        "options": [
+            "Aumenta la resistencia del aire y disminuye la eficiencia del motor.",
+            "Disminuye la densidad del aire, lo que afecta la sustentación y el rendimiento del motor.",
+            "No tiene ningún efecto en el rendimiento del avión.",
+            "Aumenta la temperatura del aire alrededor del avión."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿Cuál es la diferencia entre altitud y altura en aviación?",
+        "options": [
+            "La altitud se mide en metros y la altura en pies.",
+            "No hay diferencia, ambos términos significan lo mismo.",
+            "La altitud es la distancia vertical sobre el nivel del mar, mientras que la altura es la distancia vertical sobre el terreno o la superficie local.",
+            "La altitud es la velocidad del avión y la altura es la distancia al aeropuerto."
+        ],
+        "answer": 2
+    }
+]

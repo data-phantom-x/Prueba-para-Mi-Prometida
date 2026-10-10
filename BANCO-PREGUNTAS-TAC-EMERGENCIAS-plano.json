@@ -1,0 +1,706 @@
+[
+    {
+        "q": "Acción que afecta la seguridad, higiene o buen orden en los procesos de check-in y embarque, su actitud es desafiante. Requiere apoyo del supervisor de aeropuerto o de seguridad, la definición se refiere a:",
+        "options": [
+            "Pasajero insubordinado Categoría 1.",
+            "Pasajero insubordinado Categoría 2.",
+            "Pasajero insubordinado Categoría 3.",
+            "Ninguna de las anteriores."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Al activarse el sistema de detección de humo, se manifiestan las siguientes señales auditivas y visuales:",
+        "options": [
+            "Triple chime LO repetitivo en los parlantes de la cabina, luz roja intermitente y texto fijo en todos los AIP, luz ámbar fija en ACP del área afectada, luz ámbar fija afuera del baño afectado, indicación roja Smoke Detected en el FAP, indicación en el botón Smok Reset del AAP e indicación Smoke LAV en FAP.",
+            "Triple chime LO cada 30 segúndos por los parlantes de la cabina, luz roja fija y texto fijo en todos los AIP, luz ámbar intermitente en ACP del área afectada, luz ámbar intermitente afuera del baño afectado, indicación roja Smoke Detected en el FAP e indicación en el botón Smoke Reset del AAP.",
+            "Triple chime LO repetitivo en los parlantes de la cabina, luz roja intermitente y texto fijo en todos los AIP, luz ámbar intermitente en ACP del área afectada, luz ámbar intermitente afuera del baño afectado, indicación roja Smoke Detected en el FAP, indicación de alerta de humo en el botón Smoke Reset del AAP y FAP.",
+            "Triple chime LO cada 30 segúndos por los parlantes de la cabina, luz roja fija y texto fijo en todos los AIP, luz ámbar intermitente en ACP del área afectada, luz ámbar intermitente afuera del baño afectado, indicación ámbar Smoke Detected en el FAP e indicación en el botón Smoke Reset del AAP."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Ante la activación de la alarma de humo del baño se deberá:",
+        "options": [
+            "Informar al capitán. Verificar baño ocupado/desocupado, comprobar el calor de la puerta, y seguir procedimiento en caso de presencia o ausencia de calor y/o humo. Informar al capitán.",
+            "Informar al capitán. Descargar extintor y usar PBE.",
+            "Informar al Capitán. Abrir la puerta del baño, usarla como protección y proceder a descargar el extintor.",
+            "Pedir equipos de protección al TEA más cercano, verificar el baño, descargar extintor independientemente exista calor y/o humo e informar al capitán."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Ante la orden “attention crew, at stations” en tierra, según manual MSTEA, el procedimiento correcto es:",
+        "options": [
+            "Chequear puertas en automático. Chequear condiciones exteriores, guardar elementos y asegurar el área y esperar instrucciones de la tripulación de mando.",
+            "Chequear condiciones exteriores y esperar instrucciones de la tripulación de mando.",
+            "Revisar baño, puerta y condiciones exteriores.",
+            "Comenzar evacuación."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Ante un acto de inferencia ilícita, como un secuestro, es importante considerar:",
+        "options": [
+            "El objetivo principal de protección será el cockpit.",
+            "TEAS intentarán comunicarse con TM de la manera que sea posible.",
+            "Se intentará mantener a los secuestradores alejados para que no interfieran en el pilotaje del avión.",
+            "Todas las alternativas son correctas."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Chequeo Pre Vuelo Del Baño",
+        "options": [
+            "Manómetro del extintor en rango verde, timbre de llamado operativo, parlante operativo, sin elementos extraños, tapa de basurero operativa y TEA Líder chequea detector de humo.",
+            "Manómetro del extintor en rango verde, timbre de llamado operativo, parlante operativo, calentador de agua ON, tapa de basurero operativa y TEA Líder chequea detector de humo.",
+            "Manómetro del extintor en rango verde, timbre de llamado operativo, sin elementos extraños, tapa de basurero operativa y TEA Líder chequea detector de humo JC y TC2.",
+            "Ninguna alternativa es correcta."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "¿Cómo se activan las luces de los toboganes?",
+        "options": [
+            "Manualmente al tirar del “Pull to Inflate”.",
+            "Automáticamente cuando la puerta es abierta y el tobogán se despliega.",
+            "Automáticamente al tener el botón “Emer Lights” encendido.",
+            "No tiene luces."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Cómo se denomina el dispositivo de evacuación que se despliega al abrir el sector alar.",
+        "options": [
+            "Tobogán como elemento de flotación.",
+            "Tobogán.",
+            "Tobogán rampa.",
+            "Tobogán alar."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Con respecto al procedimiento de apertura de la puerta desde el interior, es correcto afirmar:",
+        "options": [
+            "Verificar palanca amarilla en posición DISARMED, Pin de seguridad insertado y cinta visible, Círculo y flecha no alineados. Subir palanca de control hasta posición ABIERTA/OPEN, sujetarse de manilla A, Verificar CABIN PRESSURE apagada, mover levemente la palanca de apertura, verificar SLIDE ARMED apagado, levantar palanca hasta el tope. Desplazar puerta hasta asegurarla, empujándola puerta con manilla B.",
+            "Verificar palanca amarilla en posición ARMED, Pin de seguridad insertado y cinta visible, Círculo y flecha alineados, Subir palanca de control hasta posición ABIERTA/OPEN, sujetarse de manilla A, Verificar CABIN PRESSURE apagada, mover levemente la palanca de apertura, verificar SLIDE ARMED apagado, levantar palanca hasta el tope y desplazar puerta hasta asegurarla.",
+            "Verificar palanca amarilla en posición DISARMED, Pin de seguridad insertado y cinta visible, Círculo y flecha no alineados, Subir palanca de control hasta posición ABIERTA/OPEN, Verificar SLIDE ARMED apagada, mover levemente la palanca de apertura, levantar palanca hasta el tope y desplazar puerta hasta asegurarla.",
+            "Verificar condiciones exteriores, palanca amarilla en posición DISARMED, subir palanca de control hasta posición ABIERTA/OPEN hasta asegurarla, sujetarse de manilla B, verificar CABIN PRESSURE apagada, verificar SLIDE ARMED apagado."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Con respecto al sistema de iluminación de emergencia del avión, los exit markers corresponden a:",
+        "options": [
+            "Indicaciones de Salida/ Exit próximas al piso, en las cercanías de la salida de emergencia.",
+            "Luces fijas ubicadas en el techo a lo largo del pasillo y sobre cada puerta.",
+            "Franjas foto-luminiscentes que se interrumpen al llegar a la salida. Son la alternativa cuando las señales de salida y la iluminación general no están visibles (por ejemplo, si la cabina está llena de humo).",
+            "Luces ubicadas en el sector alar, iluminan la vía de escape fuera de la cabina en la superficie del ala. Se activan sólo cuando la cubierta de la salida en el interior es removida."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Con respecto a RCP es correcto decir que hasta que se cuente con personal médico entrenado que se haga Cargo de la situación, los TEAS:",
+        "options": [
+            "Realizarán 10 ciclos de 2 insuflaciones seguidas de 30 compresiones.",
+            "Realizarán 5 ciclos de 2 insuflaciones seguidas de 30 compresiones.",
+            "Realizarán 5 ciclos de 30 compresiones seguidas de 5 insuflaciones.",
+            "Realizarán 5 ciclos de 30 compresiones seguidas de 2 insuflaciones."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Corresponde a una situación extrema y evidente de amenaza de vida a los ocupantes del avión, siendo imprescindible la inmediata evacuación. La siguiente definición corresponde a:",
+        "options": [
+            "Inicio de una evacuación.",
+            "Situación catastrófica.",
+            "Amarizaje.",
+            "Ninguna de las anteriores."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿Cuál es el procedimiento de apertura de puerta en emergencia, una vez recibida la orden de evacuación?",
+        "options": [
+            "Chequear Cabin Pressure no se enciende. Abrir: sujetarse de la manilla A en el marco de la puerta, levantar y soltar palanca de apertura. Si el tobogán no se infla, tirar Pull to Inflate. Verificar salida habilitada. Si falla el actuador la puerta debe ser empujada con fuerza.",
+            "Chequear condiciones exteriores. Abrir: sujetarse de la manilla A en marco de la puerta, levantar y soltar palanca de apertura. Si el tobogán no se infla, tirar Pull to Inflate. Verificar salida habilitada. Si falla el actuador la puerta debe ser empujada con fuerza.",
+            "Chequear condiciones exteriores. Abrir: sujetarse de la manilla A en marco de la puerta, levantar y soltar palanca de apertura. Si el tobogán no se infla, tirar Pull to Inflate. Verificar salida habilitada. Si falla el actuador la puerta debe ser bloqueada.",
+            "Chequear condiciones exteriores. Abrir: sujetarse de la manilla A en marco de la puerta, levantar y soltar palanca de apertura. Tirar Pull to Inflate. Verificar salida habilitada. Si falla el actuador la puerta debe ser empujada con fuerza."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "¿Cuál es la duración de los generadores químicos de oxígeno en cabina de pasajeros?",
+        "options": [
+            "13 o 22 minutos.",
+            "20 minutos.",
+            "15 o 22 minutos.",
+            "Ninguna es correcta."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Cuando el hueso es desplazado de su lugar normal dentro de la articulación, estamos en presencia de:",
+        "options": [
+            "Luxación.",
+            "Fractura.",
+            "Esguince.",
+            "Contusión."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Cuando los motores estén apagados y el tobogán está desarmado, si hay presión residual en cabina, se encenderá la luz roja intermitente de advertencia, lo anterior corresponde a:",
+        "options": [
+            "Slide Armed.",
+            "Botón Caution en FAP.",
+            "Cabin Pressure.",
+            "Evac CMD."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Cuando Se Activa La Alarma De Humo En Un Baño, Se Enciende La Alerta Con Luz Roja Intermitente Y Texto Fijo en los AIP:",
+        "options": [
+            "No se encienden.",
+            "Solo de la zona afectada.",
+            "Todos los AIP se encienden.",
+            "Ninguna de las anteriores."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Cuando un TEA tenga bloqueada una puerta deberá:",
+        "options": [
+            "Esperará a que su compañero habilite puerta contraria para avanzar hasta sector de salidas alares.",
+            "Avanzará inmediatamente hasta sector de salidas alares.",
+            "Ayudará a su compañero a habilitar puerta y establecer flujo de evacuación.",
+            "Se mantendrá bloqueando su puerta hasta que aparentemente no quede nadie en la cabina de pasajeros."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "De acuerdo a la posición de protección para el infante en brazos de un adulto, es correcto afirmar:",
+        "options": [
+            "El adulto debe poner un brazo alrededor de la cintura y la cabeza del infante, poner el otro contra el respaldo del asiento delantero y apoyar la cabeza firmemente sobre este brazo.",
+            "El adulto debe poner un brazo alrededor del torso y la cabeza del infante, poner el otro contra el respaldo del asiento delantero y apoyar la cabeza firmemente sobre este brazo.",
+            "El infante puede ser colocado en el regazo de un adulto (en posición horizontal).",
+            "El adulto debe sostener al infante alrededor de la cintura, la cara del infante debe mirar hacia el asiento delantero, y sujetarlo firmemente."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "De acuerdo al flujo de salida de oxígeno de las botellas, la alternativa correcta es:",
+        "options": [
+            "HI, 3 litros x minuto /duración 75 minutos.",
+            "LO, 4 litros x minuto/ duración 150 minutos.",
+            "HI-LO, 6 litros x minuto/ duración 50 minutos.",
+            "HI, 4 litros x minuto/duración 50 minutos."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Definición de gran quemado:",
+        "options": [
+            "Quemaduras de extensión de 20% en Adultos y 10% en niños/ancianos.",
+            "Quemaduras de extensión de 20% en Adultos y 15% en niños/ancianos.",
+            "Quemaduras de extensión de 10% en Adultos y 20% en niños/ancianos.",
+            "Quemaduras de extensión de 20% en Adultos y 5% en niños/ancianos."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Dentro del equipamiento de los asientos de pasajeros, se puede encontrar:",
+        "options": [
+            "Cinturón, bandeja plegable y chaleco salvavidas.",
+            "Cinturón, bandeja plegable, barra de retención para asegurar el equipaje de mano y conexión USB.",
+            "Cinturón, bandeja plegable, barra de retención para asegurar el equipaje de mano y chaleco salvavidas.",
+            "Cinturón, chaleco salvavidas y barra de retención para asegurar el equipaje de mano."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "El A320 cuenta con:",
+        "options": [
+            "2 bodegas presurizadas y un Bulk calefaccionado.",
+            "bodegas presurizadas y un Bulk calefaccionado todas con detección de humo, extinción de incendios activados desde cabina de mando, con acceso por el lado izquierdo.",
+            "2 bodegas presurizadas y un Bulk calefaccionado todas con detección de humo, extinción de incendios activados automáticamente, con acceso por el lado izquierdo.",
+            "2 bodegas presurizadas y un Bulk calefaccionado todas con detección de humo, extinción de incendios activados automáticamente, con acceso por el lado derecho."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "El ACP permite que la tripulación pueda identificar el origen de la llamada.",
+        "options": [
+            "Rojo fijo para TC/TM; azul fijo para pasajeros y ámbar fijo para baños.",
+            "Rojo fijo para TC/TM; azul fijo para pasajeros y ámbar intermitente para baños.",
+            "Rojo fijo para pasajeros, azul fijo para TC/TM y ámbar fijo para baños.",
+            "Azul para pasajeros, amarillo para baños, verde para TC/TM."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "¿En qué consiste el chequeo pre-vuelo del JMP?",
+        "options": [
+            "Plegado manual del asiento. Cinturón de seguridad y arnés operativos, equipo de emergencia asociado.",
+            "Plegado automático del asiento. Cinturón de seguridad y arnés abrochados, equipo de emergencia asociado.",
+            "Plegado automático del asiento. Cinturón de seguridad y arnés operativos, equipo de emergencia asociado.",
+            "Ninguna es correcta."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Dentro de las características de las ventanillas de la cabina de mando, se puede mencionar:",
+        "options": [
+            "Son vías de emergencia principales y sólo pueden ser abiertas desde el interior.",
+            "Son vías de emergencia alternativas y sólo pueden ser abiertas tanto desde el interior como el exterior.",
+            "Son vías de emergencia alternativas y sólo pueden ser abiertas desde el interior.",
+            "Son vías de emergencia principales y pueden ser abiertas desde el interior y exterior."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "EL BRIEFING DE SALIDAS DE EMERGENCIA LO REALIZAN:",
+        "options": [
+            "TEA 3 en las filas lado L y TEA 4 en las filas lado R.",
+            "TEA 3 en las filas 12 y TEA 4 en las filas 14.",
+            "TEA 3 en las filas lado R y TEA 4 en las filas lado L.",
+            "TEA 3 en las filas 14 y TEA 4 en las filas 12."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "El concepto área crítica asegurada consiste en:",
+        "options": [
+            "Área crítica asegurada sin pasajeros, baño bloqueado, trolley cruzado frente al pasillo.",
+            "Área crítica asegurada sin pasajeros, baño bloqueado, trolley (con o sin elementos de servicio en su cubierta) cruzado frente al pasillo.",
+            "Área crítica asegurada sin pasajeros, baño desocupado y bloqueado, trolley (sin elementos de servicio en su cubierta) cruzado frente al pasillo, de manera de impedir el paso de algún pasajero, además un TEA se mantendrá resguardando esa área.",
+            "Área crítica asegurada sin pasajeros, baño desocupado y desbloqueado, trolley (sin elementos de servicio en su cubierta) cruzado frente al pasillo, de manera de impedir el paso de algún pasajero, además un TEA se mantendrá resguardando esa área."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "El EVAC CMD activa una orden de evacuación. marque cuál de estas alternativas es correcta:",
+        "options": [
+            "FAP resetea únicamente zona puertas 1.",
+            "FAP resetea zona puertas 1 y puertas 4.",
+            "AAP resetea zona puertas 1 y 4.",
+            "Ninguna es correcta."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "El flujo de salida en emergencia para los pax es de:",
+        "options": [
+            "1 pax por segúndo por puerta y 2 por segúndo por ventanilla.",
+            "2 pax por segúndo por puerta y 1 pax cada 2 segúndos por ventanilla.",
+            "1 pax por segúndo por puerta y 1 pax cada 2 segúndos por ventanilla.",
+            "Ninguna es correcta."
+        ],
+        "answer": 0,
+        "answers": [
+            0,
+            2
+        ]
+    },
+    {
+        "q": "El objetivo de una evacuación es facilitar la rápida salida de los pasajeros de un avión. considerando que los efectos de una gran cantidad de humo dentro de la cabina son tóxicos, el tiempo límite para la evacuación será:",
+        "options": [
+            "60 segúndos.",
+            "70 segúndos..",
+            "90 segúndos.",
+            "90 minutos."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "El procedimiento de búsqueda en cabina ante la amenaza de bomba es:",
+        "options": [
+            "Informar a pasajeros que se realizara una búsqueda en cabina, revisar equipajes de mano, galleys y baños.",
+            "Revisar equipaje de mano de pasajeros, dividir la cabina en tres niveles, utilizar check-list de búsqueda, abarcando cabina, galleys y baños.",
+            "Pedir a pasajeros que identifiquen su equipaje de mano, dividir la cabina en dos niveles, utilizar checklist de búsqueda, abarcando cabina, galleys, baños y cockpit.",
+            "Pedir a pasajeros que identifiquen su equipaje de mano, dividir la cabina en dos niveles, utilizar checklist de búsqueda, abarcando cabina, galleys y baños."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "El procedimiento de chequeo pre-vuelo de la puerta, corresponde a:",
+        "options": [
+            "Tobogán desarmado palanca amarilla en posición DISARMED, Pin de seguridad insertado y cinta visible, círculo y flecha alineados y verificar presión del tobogán en rango verde.",
+            "Tobogán desarmado y verificar presión del tobogán en rango verde y verificar la vigencia.",
+            "Tobogán desarmado y verificar presión del tobogán en rango verde y realizar cross check.",
+            "Tobogán desarmado, palanca amarilla en posición DISARMED, Pin de seguridad insertado y cinta visible, círculo y flecha no alineados y verificar presión del tobogán en rango verde."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "El tiempo útil de conciencia (TUC), es el intervalo entre la interrupción del aporte de oxígeno o exposición a un ambiente pobre de oxígeno, hasta el momento en que se pierde la capacidad de tomar acciones protectoras o correctivas. El TUC no se considera hasta la pérdida total de conciencia. a 40.000 ft el TUC es de:",
+        "options": [
+            "1 minuto.",
+            "16 segúndos.",
+            "15 segúndos.",
+            "30 segúndos."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "El tobogán se infla automáticamente en:",
+        "options": [
+            "5 segúndos.",
+            "7 segúndos.",
+            "10 segúndos.",
+            "15 segúndos."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "En caso de ser necesario inmovilizar o restringir a un pasajero disruptivo a bordo, se podrá seguir el siguiente procedimiento:",
+        "options": [
+            "TEAS solicitarán ayuda de pasajeros y podrán utilizar elementos ubicados en el MK.",
+            "Previa autorización del capitán, es posible utilizar la cuerda de escape del cockpit y amarrar al pasajero de ser necesario.",
+            "Se podrá utilizar elementos disponibles en UPK, como cinta adhesiva u otros elementos.",
+            "Los TEAS podrán utilizar las esposas en caso de tener que inmovilizar a un pasajero."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "En todas las puertas se encuentra el indicador CABIN PRESSURE, cuya función implica:",
+        "options": [
+            "Indicar que el tobogán se encuentra armado.",
+            "Indicar que la puerta se encuentra desasegurada.",
+            "Indicar si existe presión residual en la cabina.",
+            "Indicar cuando la cabina está siendo presurizada."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Entre las responsabilidades de la tripulación de cabina está:",
+        "options": [
+            "Reconocer e identificar las posibles mercancías peligrosas ocultas transportadas por pasajeros.",
+            "Revisar el equipaje sospechoso de los pasajeros.",
+            "Pedirle al pasajero que abra su equipaje para revisar si transporta MMPP.",
+            "Ninguna es correcta."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "En una preparación de cabina, luego de finalizado paso fraseología el TEA-l solicita vía PA, que se identifiquen tripulantes de la compañía o de otras líneas aéreas, personal militar o personal entrenado para situaciones de emergencia o crisis (como policías, bomberos, médicos y paramédicos), esto corresponde al paso:",
+        "options": [
+            "Paso 4.",
+            "Paso 2.",
+            "Paso 3.",
+            "Paso 6."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "La cantidad de máscaras de oxígeno en la cabina de pasajeros es de:",
+        "options": [
+            "4 máscaras por bloque de asiento en toda la flota.",
+            "La cantidad depende de la matrícula del avión.",
+            "3 máscaras por bloque de asientos.",
+            "Ninguna es correcta."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "La cantidad y distribución de los equipos de emergencia ubicados en cabina de pasajeros y cabina de mando se establecen en un documento denominado:",
+        "options": [
+            "LOPA.",
+            "MEL.",
+            "Distribución de equipos de emergencia.",
+            "Emergency equipment list."
+        ],
+        "answer": 2,
+        "answers": [
+            2,
+            3
+        ]
+    },
+    {
+        "q": "La clase 4 de las MMPP corresponde a:",
+        "options": [
+            "Sustancias comburentes y Peróxidos orgánicos.",
+            "Mercancías peligrosas diversas.",
+            "Sólidos inflamables.",
+            "Materiales Radioactivos."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "La posición de protección de un TEA es la siguiente:",
+        "options": [
+            "Sentado lo más atrás posible del respaldo, cinturón de seguridad sobre las caderas y arnés ajustado. Pies separados y apoyados en el suelo alejados del asiento. Manos sobre las piernas o sujetas del borde del asiento. Tea en JMP mirando hacia adelante con el mentón tocando el pecho, TEA en JMP mirando hacia atrás con la cabeza apoyada contra él apoya cabeza.",
+            "Sentado lo más atrás posible del respaldo, cinturón de seguridad sobre las caderas y arnés ajustado. Pies separados y apoyados en el suelo alejados del asiento. Manos sobre las piernas o sujetas del borde del asiento. TEA en JMP mirando hacia adelante con la cabeza apoyada contra el apoya cabeza. TEA en JMP mirando hacia atrás con el mentón tocando el pecho.",
+            "No existe posición de protección para los TEAS.",
+            "Sentado lo más atrás posible del respaldo, cinturón de seguridad sobre las caderas y arnés ajustado. Pies separados y apoyados en el suelo alejados del asiento. Manos detrás de la nuca. Tea en JMP mirando hacia adelante con el mentón tocando el pecho, TEA en JMP mirando hacia atrás con la cabeza apoyada contra el apoya cabeza."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Las puertas al ser abiertas desde el exterior generan que el tobogán se desactive automáticamente.",
+        "options": [
+            "Verdadero.",
+            "Falso."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Las puertas del avión están asignadas a un TEA durante todo el vuelo, siendo de exclusiva responsabilidad de este los siguientes procedimientos: I. Chequeo pre-vuelo. II. Apertura en operación normal y cierre. III. Procedimiento de armado y desarmado de tobogán al iniciar y finalizar vuelo o cuando el capitán lo determine. IV Apertura de puerta en emergencia. respecto a lo anterior, es correcto:",
+        "options": [
+            "Sólo I.",
+            "I, II y III.",
+            "II, III y IV.",
+            "Todas son correctas."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Las puertas son salidas a nivel de piso, consideradas salidas principales, para una evacuación:",
+        "options": [
+            "Tanto en tierra como en agua.",
+            "Sólo en tierra.",
+            "Sólo en agua.",
+            "Son consideradas salidas secundarias."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "La tripulación de cabina, antes de cerrar puertas, deberá efectuar el briefing a pasajeros en salidas de emergencia el que debe abordar la siguiente información: I. Indicar que están sentados en un asiento de salida de emergencia. II. Preguntar al pasajero si tiene alguna enfermedad física para ir sentado ahí. III. Solicitar que lean la tarjeta de seguridad indicando que en ésta se establecen los requerimientos. IV. Preguntar si está dispuesto a cumplir esas funciones y cumple con los requisitos. v. indicar que si tiene dudas contacte a un tripulante de cabina. vi. pedir la tarjeta de embarque y cédula de identidad para confirmar su asiento.",
+        "options": [
+            "I, III, IV, V.",
+            "III, IV, V, VI.",
+            "I, II, IV, VI.",
+            "I, III, IV, VI."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "La tripulación de cabina dará asistencia dentro del avión a lo requerido por pasajeros discapacitados, enfermos y con necesidades especiales de acuerdo con lo siguiente: I. Asistir a pasajeros con dificultad de movilidad para utilizar la silla de rueda del avión para que pueda trasladarse hacia y desde el baño. II. Asistir al pasajero en su alimentación. III. Asistir al pasajero guardando y sacando el equipaje de mano y sus elementos de asistencia. IV. Asistir al pasajero en su alimentación abriendo envases e identificando la comida. Lo anterior se refiere a:",
+        "options": [
+            "I, II, IV.",
+            "I, III, IV.",
+            "I,I I,III.",
+            "TODAS SON CORRECTAS."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "La válvula RELIEF del PBE tiene como objetivo:",
+        "options": [
+            "El TEA pueda comunicarse al transmitir su voz.",
+            "Que el PBE elimine rápidamente todo el O2 restante.",
+            "Que se elimine el CO2 del interior.",
+            "A y c son correctas."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Los A320 cuentan con salidas en el sector alar, indique la(s) alternativa(s) correcta(s): I. Pueden ser abiertas, tanto del interior como del exterior. II. Proveen un flujo de salida de 1 pasajero por 2 segúndos. III. Al abrirse la ventanilla, un tobogán rampa se activa hacia al borde de fuga del ala. IV. El tobogán no se desconecta del avión.",
+        "options": [
+            "I y III son correctas.",
+            "I, II y III son correctas.",
+            "Todas son correctas.",
+            "Sólo III es correcta."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Los anuncios desde el cockpit tienen prioridad sobre los anuncios efectuados desde la cabina de pasajeros y sobre el sistema de entretenimiento del avión.",
+        "options": [
+            "Verdadero.",
+            "Falso."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Los CIRCUIT BREAKERS son fusibles que protegen los equipos eléctricos del avión cortando la energía si hay un corto circuito o un exceso de carga. los CIRCUIT BREAKERS a los cuales la tripulación de cabina tiene acceso, están instalados en galleys. cuando se produce un corto circuito o un exceso de carga, el cb salta quedando fuera de suposición normal. según el MSTEA es correcto decir que:",
+        "options": [
+            "Si un CB salta, se debe resetear e informar al Capitán.",
+            "Si un CB salta, no se debe resetear.",
+            "Si un CB salta, se debe sacar por completo de su posición normal.",
+            "Si un CB salta, no se debe resetear, informar al Capitán y seguir sus instrucciones."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Los toboganes rampa se encuentran siempre en ARMED, de abrir la salida desde el interior o exterior el tobogán se desplegará automáticamente.",
+        "options": [
+            "Verdadero.",
+            "Si se abre por el exterior el tobogán se desarmará automáticamente.",
+            "Sólo si se tira el pull to ínflate.",
+            "Sólo si se abren todas las salidas."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "NOTOC:",
+        "options": [
+            "Guía de referencia rápida, usado por los TEAS para determinar las acciones a seguir según el código entregado por la TV en respuesta ante una emergencia con Mercancías Peligrosas.",
+            "Son mercancías de diferentes tipos que son propiedad de la empresa y que deben ser trasladadas de una estación a otra, y cuando estas son Mercancías Peligrosas deberán cumplir con toda reglamentación.",
+            "Documento que recibe el Capitán durante el despacho del vuelo a través del cual toma conocimiento de las MP que lleva a bordo (de propiedad del operador o baterías de sillas de rueda de pasajeros) y que cumpliendo con lo estipulado en la reglamentación pueden ser transportadas por vía aérea.",
+            "Documento aprobado por la DGAC, que permite la operación de una determinada aeronave con ítems de equipos inoperativos, conforme a condiciones específicas al momento de su despacho."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Para el cierre de puertas la tripulación debe contar con los siguientes puntos:",
+        "options": [
+            "Briefing a pasajeros sentados en salidas de emergencia realizado, briefing a pasajeros con necesidades especiales realizado (si corresponde), equipaje de mano en cabina guardado y asegurado.",
+            "Briefing a pasajeros sentados en salidas de emergencia realizado, briefing a pasajeros con necesidades especiales realizado (si corresponde), briefing a infantes, equipaje de mano en cabina guardado y asegurado, pasajeros ubicados en sus asientos asignados.",
+            "Briefing a pasajeros sentados en salidas de emergencia realizado, briefing de infantes, equipaje de mano en cabina guardado, pasajeros ubicados en sus asientos asignados.",
+            "Briefing a pasajeros sentados en salidas de emergencia realizado, briefing a pasajeros con Necesidades especiales realizado (si corresponde)."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Procedimiento acceso a la cabina de mando en emergencia: si se ha denegado el acceso (luz roja), el key pad quedará inhibido por un periodo de:",
+        "options": [
+            "5 minutos.",
+            "5 segúndos.",
+            "2 minutos.",
+            "4 minutos."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "“Procedimiento cuyo objetivo es detectar potenciales situaciones de riesgo como humo, recalentamiento, olores inusuales, derrames. condición y comportamiento de pasajeros, hielo en las alas u otras que puedan afectar la seguridad del vuelo”, la descripción se refiere a: 25",
+        "options": [
+            "Chequeos preventivos.",
+            "Cabina libre.",
+            "Revisión silenciosa.",
+            "Clear Aircraft Concept."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "Una vez el capitán da la orden de “tripulación, puertas en automático CROSS CHECK y reportar”, la línea de reporte de armado de tobogán debe ser:",
+        "options": [
+            "TEA 3 reporta al TEA 2 y TEA 2 realiza llamado a TEA L.",
+            "TEA L realiza llamado en conferencia y TEA2 realiza reporte.",
+            "TEA L verifica en el FAP y reporta al capitán.",
+            "TEA L o TEA 4 realiza llamado en conferencia y TEA 2 realiza reporte."
+        ],
+        "answer": null
+    },
+    {
+        "q": "Punto de decisión corresponde a:",
+        "options": [
+            "Momento en el cual el TEA-L deberá reportar la cabina libre.",
+            "Momento en el cual el TEA-L ordenará a los pasajeros protegerse previo a un aterrizaje de emergencia.",
+            "Momento en el cual los TEA asegurarán la cabina previo al despegue o aterrizaje.",
+            "Ninguno es correcto."
+        ],
+        "answer": null
+    },
+    {
+        "q": "¿Qué característica principal posee el tipo de dispositivo de evacuación con el que están equipadas las puertas de los A320?",
+        "options": [
+            "Son toboganes balsa de uno o dos carriles, que permiten un flujo de salida mayor para una evacuación.",
+            "Los toboganes permiten un flujo de salida de 1 pasajero por segúndo en una evacuación.",
+            "Tienen toboganes rampa que permiten un flujo de salida mayor para una evacuación.",
+            "Son toboganes y se pueden utilizar como elemento de flotación en caso de ditching."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "¿Qué indicación figura en FAP estando el avión con la puerta abierta?",
+        "options": [
+            "Indicación de color verde.",
+            "Indicación de color blanco.",
+            "Indicación de color ámbar.",
+            "Indicación de color rojo."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Qué luz se encenderá en el ACP cuando se active la alarma de humo del baño.",
+        "options": [
+            "Luz ámbar fija en el ACP del área afectada.",
+            "Luz ámbar intermitente en todos los ACP de la cabina.",
+            "Luz ámbar intermitente en el ACP del área cercana del baño afectado.",
+            "Luz roja intermitente en el ACP del área afectada."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Respecto a la protección del área crítica, es correcto: I. Es una actividad permanente durante toda la operación, en donde la tripulación de cabina deberá mantener el control y supervisión del área. II. Durante el vuelo, la tripulación de mando mantendrá una supervisión periódica del área crítica, a través de las cámaras de vigilancia. III. Consiste en evitar actos de interferencia ilícita, por lo que el carro de servicio debe estar bloqueando el pasillo en todo momento lo anterior se refiere a:",
+        "options": [
+            "Sólo I.",
+            "II y III.",
+            "I y II.",
+            "I, II y III."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Respecto al procedimiento de bomba a bordo, podemos afirmar que, si se encuentra un elemento sospechoso en cabina, el procedimiento será:",
+        "options": [
+            "Mover a los pasajeros 2 filas de asientos alejados de la ubicación de la bomba.",
+            "Mover a los pasajeros al menos 4 filas de asientos alejados de la ubicación de la bomba.",
+            "Mover a los pasajeros 8 filas de asientos alejados de la ubicación de la bomba.",
+            "Ninguna de las anteriores."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Respecto al uso del interfono y P.A, se puede mencionar:",
+        "options": [
+            "El volumen del PA aumenta automáticamente en caso de una descompresión de cabina.",
+            "El volumen del PA disminuye al encenderse los motores.",
+            "El PA no funciona con motores apagados.",
+            "El volumen del PA aumenta al apagarse los motores."
+        ],
+        "answer": 0
+    },
+    {
+        "q": "“Se caracteriza por un aumento en la frecuencia y profundidad de los movimientos respiratorios. esto genera exceso de eliminación de anhídrido carbónico por el pulmón y trastorno del equilibrio ácido base conocido como alcalosis”. la siguiente definición corresponde a:",
+        "options": [
+            "Hipoxia.",
+            "Síncope.",
+            "Hiperventilación.",
+            "Intoxicación."
+        ],
+        "answer": 2
+    },
+    {
+        "q": "Según el Decreto Supremo 369, pasajero con discapacidad o con movilidad reducida no podrá viajar sólo si este no cumple con: I. Comprender o cumplir las mínimas instrucciones de seguridad, que tanto la tripulación de vuelo y auxiliar imparta a los pasajeros. II. Ante un eventual procedimiento de emergencia no sean capaces de valerse por sí mismos. III. Atender sus necesidades fisiológicas o actuar conforme a las indicaciones de la tripulación de vuelo y auxiliar. lo anterior se refiere a:",
+        "options": [
+            "Solo I y II.",
+            "I, II y III.",
+            "Solo II y III.",
+            "Ninguna de las anteriores."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Según MSTEA, los métodos de extinción de incendio son:",
+        "options": [
+            "Sofocación, agua, halón y halón reciclado.",
+            "Enfriamiento, halón y agua o líquido no inflamable.",
+            "Remoción, halón e inhibición de reacción en cadena.",
+            "Sofocación, enfriamiento, remoción e inhibición de reacción en cadena."
+        ],
+        "answer": 3
+    },
+    {
+        "q": "Según nuestro MSTEA, los chequeos preventivos se deben realizar:",
+        "options": [
+            "Cada 30 minutos en vuelos de menos de 1 hora mientras no se esté entregando un servicio en la cabina de pasajeros.",
+            "Cada 30 minutos en vuelos de más de 1 hora mientras no se esté entregando un servicio en la cabina de pasajeros.",
+            "Cada 30 minutos sólo si los pasajeros van al baño.",
+            "Queda a criterio del TEA-L si se realizan o no."
+        ],
+        "answer": 1
+    },
+    {
+        "q": "Según procedimiento evacuación en agua. sería correcto afirmar que, una vez alejados del avión comienza el proceso de supervivencia donde el tripulante organizará al grupo más cercano en base a la gravedad de cada persona:",
+        "options": [
+            "Heridos, niños y adultos mayores.",
+            "Mujeres y niños primero.",
+            "Tripulación y luego pasajeros.",
+            "Ninguna de las anteriores."
+        ],
+        "answer": 0
+    }
+]
