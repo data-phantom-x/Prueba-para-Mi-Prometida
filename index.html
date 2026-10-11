@@ -14,6 +14,8 @@
             --blanco: #FFFFFF;
             --error: #FB7185;
             --exito: #34D399;
+            --texto-suave: #718096;
+            --texto-medio: #4A5568;
             --tarjeta-bg: rgba(255, 255, 255, 0.9);
         }
 
@@ -26,6 +28,8 @@
                 --rosa-principal: #FF7EB3;
                 --rosa-fuerte: #F687B3; 
                 --rosa-pastel: #4A5568; 
+                --texto-suave: #A0AEC0;
+                --texto-medio: #CBD5E0;
                 --tarjeta-bg: rgba(45, 55, 72, 0.95);
             }
             body {
@@ -42,9 +46,25 @@
                 border-color: var(--rosa-principal) !important;
                 color: var(--rosa-principal) !important;
             }
-            .progress-bar { background-color: #4A5568 !important; }
+            .option-btn.correct {
+                background-color: rgba(52, 211, 153, 0.20) !important;
+                border-color: var(--exito) !important;
+                color: #6EE7B7 !important;
+                opacity: 1 !important;
+            }
+            .option-btn.incorrect {
+                background-color: rgba(251, 113, 133, 0.20) !important;
+                border-color: var(--error) !important;
+                color: #FDA4AF !important;
+                opacity: 0.9 !important;
+            }
             .debrief-item { background-color: #1A202C !important; border-color: #4A5568 !important;}
             select, input[type="checkbox"] { background-color: #1A202C; color: white; border-color: #4A5568;}
+            .option-btn { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
+            .debrief-item { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25); }
+            .btn:disabled { background: #4A5568; color: #E2E8F0; }
+            .timer.danger { animation-name: pulseRedDark; }
+            ::-webkit-scrollbar-track { background: #1A202C; }
         }
 
         * { box-sizing: border-box; font-family: 'Segoe UI', Quicksand, Roboto, sans-serif; }
@@ -55,6 +75,8 @@
             margin: 0; padding: 20px;
             display: flex; flex-direction: column; align-items: center;
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
             background-image: radial-gradient(circle at 15% 50%, rgba(255, 117, 140, 0.08) 0%, transparent 25%),
                               radial-gradient(circle at 85% 30%, rgba(213, 63, 140, 0.06) 0%, transparent 25%);
         }
@@ -63,6 +85,69 @@
         @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
         @keyframes pop { 0% { transform: scale(0.9); opacity: 0; } 50% { transform: scale(1.05); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
         @keyframes pulseRed { 0% { color: var(--error); } 50% { color: #9F1239; transform: scale(1.1); } 100% { color: var(--error); } }
+        @keyframes pulseRedDark { 0% { color: #FDA4AF; } 50% { color: #F43F5E; transform: scale(1.1); } 100% { color: #FDA4AF; } }
+
+        /* --- FONDO TIERNO: auroras, corazones y destellos --- */
+        #bg-fx { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+
+        .aurora {
+            position: absolute; border-radius: 50%;
+            filter: blur(70px); opacity: .5;
+            animation: auroraMove 22s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+        @keyframes auroraMove {
+            0%   { transform: translate3d(0, 0, 0) scale(1); }
+            50%  { transform: translate3d(6vw, -7vh, 0) scale(1.18); }
+            100% { transform: translate3d(-7vw, 5vh, 0) scale(.92); }
+        }
+
+        .corazon {
+            position: absolute; bottom: -12vh; line-height: 1;
+            opacity: 0; user-select: none;
+            animation: subir linear infinite;
+            will-change: transform, opacity;
+            filter: drop-shadow(0 2px 6px rgba(213, 63, 140, .25));
+        }
+        @keyframes subir {
+            0%   { transform: translate3d(0, 0, 0) scale(.5) rotate(0deg); opacity: 0; }
+            12%  { opacity: .8; }
+            50%  { transform: translate3d(var(--vaiven, 30px), -52vh, 0) scale(1) rotate(10deg); opacity: .9; }
+            85%  { opacity: .7; }
+            100% { transform: translate3d(calc(var(--vaiven, 30px) * -1), -108vh, 0) scale(1.2) rotate(-12deg); opacity: 0; }
+        }
+
+        .destello {
+            position: absolute; border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,.95) 0%, rgba(255,214,235,.5) 45%, transparent 70%);
+            animation: parpadear ease-in-out infinite;
+            will-change: opacity, transform;
+        }
+        @keyframes parpadear {
+            0%, 100% { opacity: .15; transform: scale(.7); }
+            50%      { opacity: .85; transform: scale(1.25); }
+        }
+
+        .nube {
+            position: absolute; font-size: 3rem; opacity: .35;
+            animation: derivar linear infinite;
+            will-change: transform;
+            filter: blur(.3px);
+        }
+        @keyframes derivar {
+            0%   { transform: translateX(-25vw); }
+            100% { transform: translateX(125vw); }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .aurora { opacity: .32; }
+            .destello { background: radial-gradient(circle, rgba(255,255,255,.9) 0%, rgba(255,126,179,.45) 45%, transparent 70%); }
+            .nube { opacity: .22; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .aurora, .corazon, .destello, .nube { animation: none !important; display: none; }
+        }
 
         .container {
             background-color: var(--tarjeta-bg);
@@ -71,10 +156,203 @@
             padding: 40px 30px;
             width: 100%; max-width: 550px;
             text-align: center; position: relative;
+            z-index: 1;
             border: 3px solid rgba(255, 117, 140, 0.1);
+            backdrop-filter: blur(16px) saturate(1.25);
+            -webkit-backdrop-filter: blur(16px) saturate(1.25);
         }
 
+        /* Borde de acuarela giratorio */
+        .container::before {
+            content: ''; position: absolute; inset: -5px; border-radius: 41px;
+            z-index: -1; opacity: .8; padding: 4px;
+            background: conic-gradient(from 0deg, #FF758C, #FF7EB3, #FFD1DC, #D53F8C, #FFB6C1, #FF758C);
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask-composite: exclude;
+            animation: girarBorde 9s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes girarBorde {
+            0%   { filter: hue-rotate(0deg) saturate(1); }
+            50%  { filter: hue-rotate(180deg) saturate(1.25); }
+            100% { filter: hue-rotate(360deg) saturate(1); }
+        }
+        @media (prefers-reduced-motion: reduce) { .container::before { animation: none; } }
+
         h1 { color: var(--rosa-fuerte); font-size: 1.8rem; margin-bottom: 10px; animation: float 4s ease-in-out infinite; }
+
+        /* Título letra a letra */
+        .letra { display: inline-block; opacity: 0; animation: entrarLetra .55s cubic-bezier(.22,1,.36,1) forwards; white-space: pre; }
+        @keyframes entrarLetra {
+            from { opacity: 0; transform: translateY(14px) rotate(-8deg) scale(.6); }
+            to   { opacity: 1; transform: none; }
+        }
+        .latido { display: inline-block; animation: latido 1.5s ease-in-out infinite; }
+        .planita { display: inline-block; font-size: 1.75em; line-height: 0; vertical-align: -0.18em;
+                   animation: volar 3.2s ease-in-out infinite; }
+        @keyframes volar {
+            0%, 100% { transform: translateX(0) rotate(-3deg); }
+            50%      { transform: translateX(6px) rotate(4deg); }
+        }
+        @keyframes latido {
+            0%, 100% { transform: scale(1); }
+            25%      { transform: scale(1.25); }
+            40%      { transform: scale(1.05); }
+            60%      { transform: scale(1.18); }
+        }
+
+        /* Transiciones entre pantallas */
+        .pantalla { transition: opacity .5s ease, transform .5s cubic-bezier(.22,1,.36,1); }
+        .pantalla.saliendo { opacity: 0; transform: translateY(-16px) scale(.97); pointer-events: none; }
+        .pantalla.entrando { opacity: 0; transform: translateY(20px) scale(.97); }
+
+        /* Pantalla de despegue */
+        #pantalla-despegue {
+            position: fixed; inset: 0; z-index: 50;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+            background: linear-gradient(180deg, #BFE3FF 0%, #E8F4FF 45%, #FFE3EF 100%);
+            overflow: hidden;
+        }
+        @media (prefers-color-scheme: dark) {
+            #pantalla-despegue { background: linear-gradient(180deg, #0B1020 0%, #1B2242 45%, #3A1F35 100%); }
+        }
+        .nubecita { position: absolute; font-size: 3.4rem; opacity: .75; animation: pasarNube linear infinite; }
+        @keyframes pasarNube { 0% { transform: translateX(-30vw); } 100% { transform: translateX(130vw); } }
+        .pista-despegue {
+            position: absolute; left: -480px; right: -480px; bottom: 0; height: 24%;
+            background-color: #5C6580;
+            background-image:
+                linear-gradient(180deg, rgba(10,14,28,.55), rgba(10,14,28,0) 46%),
+                linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,0)),
+                repeating-linear-gradient(90deg, rgba(255,255,255,.95) 0 46px, rgba(255,255,255,0) 46px 108px),
+                linear-gradient(0deg, rgba(255,255,255,.9), rgba(255,255,255,0));
+            background-size: 100% 100%, 100% 4px, 100% 5px, 100% 4px;
+            background-position: 0 0, 0 11%, 0 50%, 0 100%;
+            background-repeat: no-repeat, no-repeat, repeat-x, no-repeat;
+            box-shadow: inset 0 3px 0 rgba(255,255,255,.16);
+            animation: irPista 2.9s cubic-bezier(.55,.04,.78,.62) forwards;
+        }
+        .pista-despegue::before {
+            content: ''; position: absolute; left: -60px; right: -60px; bottom: 100%;
+            height: 34px; background: linear-gradient(180deg, rgba(146,196,156,.85), rgba(112,160,126,.9));
+            box-shadow: 0 -3px 10px rgba(90,140,110,.35);
+        }
+        @media (prefers-color-scheme: dark) {
+            .pista-despegue { background-color: #232A42; }
+            .pista-despegue::before { background: linear-gradient(180deg, rgba(26,52,38,.9), rgba(16,32,24,.95)); }
+        }
+        @keyframes irPista { to { transform: translateX(-440px); } }
+        /* --- A320: se carga desde el archivo A320-librea.svg --- */
+        .a320 { display: block; width: 100%; }
+        img.a320 { width: 100%; height: auto; display: block; }
+
+        #avion-despegue {
+            position: absolute; left: 0; top: calc(88vh - 102px);
+            width: 320px; height: auto; z-index: 2; will-change: transform;
+            animation: despegar 4.6s linear forwards;
+        }
+        /* Carrera realista: suelta frenos -> aceleracion -> rotacion -> ascenso */
+        @keyframes despegar {
+            0%   { transform: translateX(-26px) rotate(1.6deg) scale(1); }
+            10%  { transform: translateX(calc(-26px + 2vw)) rotate(.5deg) scale(1); }
+            22%  { transform: translateX(calc(-26px + 6vw)) rotate(0deg) scale(1); }
+            34%  { transform: translateX(calc(-26px + 13vw)) rotate(0deg) scale(1); }
+            45%  { transform: translateX(calc(-26px + 22vw)) rotate(0deg) scale(1); }
+            55%  { transform: translateX(calc(-26px + 33vw)) rotate(0deg) scale(1); }
+            63%  { transform: translateX(calc(-26px + 45vw)) rotate(-.5deg) scale(1); }
+            70%  { transform: translateX(calc(-26px + 57vw)) translateY(-2vh) rotate(-5deg) scale(1); }
+            78%  { transform: translateX(calc(-26px + 69vw)) translateY(-9vh) rotate(-11deg) scale(.99); }
+            85%  { transform: translateX(calc(-26px + 80vw)) translateY(-19vh) rotate(-14deg) scale(.98); }
+            92%  { transform: translateX(calc(-26px + 90vw)) translateY(-34vh) rotate(-16deg) scale(.96); }
+            100% { transform: translateX(calc(-26px + 100vw + 24px)) translateY(-58vh) rotate(-17deg) scale(.93); }
+        }
+        /* (la variante oscura antigua de .pista-despegue se elimina: el bloque
+           @media de mas abajo ya cubre el modo noche) */
+        @media (prefers-color-scheme: dark) { .pista-despegue { opacity: 1; } }
+        .texto-despegue {
+            position: relative; z-index: 2; font-weight: bold; color: #9D174D;
+            font-size: 1.05rem; text-align: center; padding: 0 20px;
+        }
+        @media (prefers-color-scheme: dark) { .texto-despegue { color: #F687B3; } }
+
+        /* Avioneta en la barra de progreso */
+        #avion-progreso {
+            position: absolute; top: 14px; left: 12%; width: 70px; height: auto;
+            transition: left .55s cubic-bezier(.22,1,.36,1);
+            pointer-events: none; z-index: 6;
+            animation: planear 3.4s ease-in-out infinite;
+        }
+        #avion-progreso::before {
+            content: ''; position: absolute; right: 98%; top: 52%; width: 32px; height: 2.5px;
+            background: linear-gradient(270deg, rgba(255,255,255,.8), transparent);
+            animation: estela 3.4s ease-in-out infinite;
+        }
+        .barra-via { position: relative; margin-top: 30px; }
+
+        /* Explosiones de corazones */
+        .detonador {
+            position: fixed; z-index: 60; pointer-events: none;
+            font-size: 1.3rem; will-change: transform, opacity;
+            animation: detonar .95s ease-out forwards;
+        }
+        @keyframes detonar {
+            0%   { opacity: 1; transform: translate(0,0) scale(.3) rotate(0deg); }
+            100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1.35) rotate(var(--rot)); }
+        }
+
+        /* Shake + corazón roto */
+        @keyframes sacudir {
+            0%,100% { transform: translateX(0); }
+            20% { transform: translateX(-9px) rotate(-1.5deg); }
+            40% { transform: translateX(9px) rotate(1.5deg); }
+            60% { transform: translateX(-6px); }
+            80% { transform: translateX(6px); }
+        }
+        .option-btn.sacudida { animation: sacudir .5s ease; }
+
+        /* Lluvia de corazones / globos en resultados */
+        .confeti {
+            position: fixed; top: -8vh; z-index: 55; pointer-events: none;
+            font-size: 1.6rem; will-change: transform, opacity;
+            animation: caer linear forwards;
+        }
+        @keyframes caer {
+            0%   { opacity: 1; transform: translateY(0) rotate(0deg); }
+            100% { opacity: 0; transform: translateY(115vh) rotate(540deg); }
+        }
+
+        /* Estela de corazones al mover el cursor */
+        .estela {
+            position: fixed; z-index: 4; pointer-events: none;
+            font-size: 1.1rem; will-change: transform, opacity;
+            animation: estelar .9s ease-out forwards;
+        }
+        @keyframes estelar {
+            0%   { opacity: .9; transform: translate(-50%,-50%) scale(.4); }
+            100% { opacity: 0; transform: translate(-50%, -160%) scale(1.3); }
+        }
+
+        /* Modo noche estrellada */
+        .estrella {
+            position: absolute; border-radius: 50%; background: #fff;
+            box-shadow: 0 0 6px 2px rgba(255,255,255,.55);
+            animation: titilar ease-in-out infinite;
+        }
+        @keyframes titilar { 0%,100% { opacity: .15; transform: scale(.7); } 50% { opacity: 1; transform: scale(1.15); } }
+        .luna { position: absolute; font-size: 3rem; opacity: 0; transition: opacity .8s ease; }
+        body.noche .luna { opacity: .85; animation: flotarLuna 9s ease-in-out infinite; }
+        @keyframes flotarLuna { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+        body.noche { --fondo-suave: #0B1020; background-image: radial-gradient(circle at 20% 20%, rgba(120,80,200,.16) 0%, transparent 45%), radial-gradient(circle at 80% 75%, rgba(213,63,140,.18) 0%, transparent 45%); }
+        body.noche .estrella, body.noche .luna { display: block; }
+        .estrella, .luna { display: none; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .letra { opacity: 1; animation: none; }
+            .detonador, .confeti, .estela { display: none; }
+        }
+
         
         .setup-group {
             text-align: left; margin-bottom: 25px;
@@ -134,8 +412,118 @@
         .option-btn.correct { border-color: var(--exito); background-color: rgba(52, 211, 153, 0.15); color: #065F46; font-weight: bold; }
         .option-btn.incorrect { border-color: var(--error); background-color: rgba(251, 113, 133, 0.15); color: #9F1239; opacity: 0.8; }
 
-        .progress-bar { width: 100%; height: 8px; background-color: #FEE2E2; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #FF7EB3, #FF758C); width: 0%; transition: width 0.4s; }
+        /* ===== Barra de progreso: vuelo con parallax sobre el paisaje ===== */
+        @keyframes rodarTerreno {
+            from { background-position: 0 24px, 0 24px, 0 31px, 0 31px, 0 40px, 0 0, 0 0, 0 0; }
+            to   { background-position: -320px 24px, -320px 24px, -320px 31px, -320px 31px, 0 40px, 0 0, 0 0, 0 0; }
+        }
+        @keyframes rodarLejos {
+            from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+            to   { background-position: -96px 0, -96px 0, -96px 0, -96px 0, -96px 0, -96px 0, -96px 0, -96px 0, -200px 0, -200px 0, -200px 0; }
+        }
+        @keyframes brilhoLento { 0%,100% { opacity: 1; } 50% { opacity: .85; } }
+        @keyframes planear {
+            0%,100% { transform: translateX(-50%) translateY(0) rotate(-1.6deg); }
+            50%     { transform: translateX(-50%) translateY(-3px) rotate(1.6deg); }
+        }
+        @keyframes estela { 0%,100% { opacity: .25; } 50% { opacity: .85; } }
+        .progress-bar {
+            width: 100%; height: 58px; border-radius: 12px; overflow: hidden; position: relative;
+            background-color: #F0C7EE;
+            background-image: linear-gradient(90deg, #FFD9E8 0%, #F3C8EF 15%, #D6B6F3 33%, #A9B4EC 51%, #7B8BD8 69%, #5A6AC0 84%, #3E4C9E 100%);
+            box-shadow: inset 0 2px 8px rgba(40,20,70,.28), 0 6px 16px rgba(96,64,128,.16);
+            margin-bottom: 22px;
+        }
+        /* terreno: horizonte, suelo con surcos, ciudades APOYADAS y sierra detras */
+        .progress-bar::before {
+            content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+            background-image:
+                repeating-linear-gradient(90deg, transparent 0 196px, rgba(255,214,140,.95) 196px 197.4px, transparent 197.4px 202px, rgba(255,222,160,.9) 202px 203.4px, transparent 203.4px 208px, rgba(255,214,140,.95) 208px 209.4px, transparent 209.4px 218px, transparent 218px 320px),
+                repeating-linear-gradient(90deg, transparent 0 196px, #2E2456 196px 202px, transparent 202px 207px, #1E1740 207px 217px, transparent 217px 222px, #2E2456 222px 227px, transparent 227px 320px),
+                repeating-linear-gradient(90deg, transparent 0 196px, rgba(255,228,168,.9) 196px 197.4px, transparent 197.4px 202px, rgba(255,236,190,.8) 202px 203.4px, transparent 203.4px 208px, rgba(255,228,168,.9) 208px 209.4px, transparent 209.4px 218px, transparent 218px 320px),
+                repeating-linear-gradient(90deg, transparent 0 196px, #221B45 196px 202px, transparent 202px 207px, #171133 207px 217px, transparent 217px 222px, #221B45 222px 227px, transparent 227px 320px),
+                repeating-linear-gradient(0deg, rgba(255,255,255,.07) 0 1px, rgba(255,255,255,0) 1px 7px),
+                linear-gradient(180deg, rgba(0,0,0,0) 0 40px, rgba(206,220,255,.55) 40px 41.5px, rgba(0,0,0,0) 41.5px),
+                linear-gradient(180deg, rgba(0,0,0,0) 0 40px, #5C4A90 40px, #44346F 44px, #33255C 52px, #2A1E50 58px),
+                radial-gradient(ellipse 34px 26px at 50% 42px, #7C69B8 62%, rgba(0,0,0,0) 63%);
+            background-size: 320px 18px, 320px 18px, 320px 11px, 320px 11px, 100% 18px, 100% 58px, 100% 58px, 96px 58px;
+            background-position: 0 24px, 0 24px, 0 31px, 0 31px, 0 40px, 0 0, 0 0, 0 0;
+            background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, no-repeat, no-repeat, repeat-x;
+            animation: rodarTerreno 30s linear infinite;
+        }
+        /* fondo lejano: estrellas, luna y nubes (lento + parpadeo) */
+        .progress-bar::after {
+            content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+            background-image:
+                radial-gradient(1.3px 1.3px at 22% 13%, rgba(255,255,255,.95), transparent),
+                radial-gradient(1.1px 1.1px at 34% 25%, rgba(255,255,255,.8), transparent),
+                radial-gradient(1.5px 1.5px at 47% 10%, rgba(255,255,255,.95), transparent),
+                radial-gradient(1.1px 1.1px at 58% 22%, rgba(255,255,255,.75), transparent),
+                radial-gradient(1.2px 1.2px at 69% 14%, rgba(255,255,255,.9), transparent),
+                radial-gradient(1.1px 1.1px at 80% 24%, rgba(255,255,255,.7), transparent),
+                radial-gradient(1.4px 1.4px at 91% 12%, rgba(255,255,255,.95), transparent),
+                
+                radial-gradient(circle at 86% 18%, rgba(255,252,240,.98) 0 6px, rgba(255,246,220,.3) 7px, transparent 18px),
+                radial-gradient(ellipse 26px 7px at 30px 14px, rgba(255,255,255,.92), transparent 70%),
+                radial-gradient(ellipse 20px 6px at 118px 24px, rgba(255,255,255,.8), transparent 70%),
+                radial-gradient(ellipse 30px 8px at 230px 12px, rgba(255,255,255,.85), transparent 70%);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 200px 100%, 200px 100%, 200px 100%;
+            background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+                repeat-x, repeat-x, repeat-x;
+            animation: rodarLejos 80s linear infinite, brilhoLento 7s ease-in-out infinite;
+        }
+        .progress-fill {
+            position: absolute; left: 0; top: 0; height: 100%; width: 0%; z-index: 3;
+            background: linear-gradient(90deg, rgba(255,206,140,.06), rgba(255,240,200,.18));
+            transition: width .5s cubic-bezier(.22,1,.36,1);
+        }
+        .progress-fill::after {
+            content: ''; position: absolute; right: -1.5px; top: 0; bottom: 0; width: 2px;
+            background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.9) 45%, rgba(255,255,255,.12));
+            box-shadow: 0 0 7px rgba(255,255,255,.55);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .progress-bar {
+                background-color: #2A1F52;
+                background-image: linear-gradient(90deg, #3E3170 0%, #3A2E68 22%, #2F2559 46%, #241C48 72%, #1B1539 100%);
+            }
+            .progress-bar::before {
+                background-image:
+                    repeating-linear-gradient(90deg, transparent 0 196px, rgba(255,214,140,.95) 196px 197.4px, transparent 197.4px 202px, rgba(255,222,160,.9) 202px 203.4px, transparent 203.4px 208px, rgba(255,214,140,.95) 208px 209.4px, transparent 209.4px 218px, transparent 218px 320px),
+                    repeating-linear-gradient(90deg, transparent 0 196px, #1F1846 196px 202px, transparent 202px 207px, #130E30 207px 217px, transparent 217px 222px, #1F1846 222px 227px, transparent 227px 320px),
+                    repeating-linear-gradient(90deg, transparent 0 196px, rgba(255,228,168,.9) 196px 197.4px, transparent 197.4px 202px, rgba(255,236,190,.8) 202px 203.4px, transparent 203.4px 208px, rgba(255,228,168,.9) 208px 209.4px, transparent 209.4px 218px, transparent 218px 320px),
+                    repeating-linear-gradient(90deg, transparent 0 196px, #18123A 196px 202px, transparent 202px 207px, #0E0A22 207px 217px, transparent 217px 222px, #18123A 222px 227px, transparent 227px 320px),
+                    repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, rgba(255,255,255,0) 1px 7px),
+                    linear-gradient(180deg, rgba(0,0,0,0) 0 40px, rgba(190,205,255,.35) 40px 41.5px, rgba(0,0,0,0) 41.5px),
+                    linear-gradient(180deg, rgba(0,0,0,0) 0 40px, #3A2D63 40px, #2A2049 44px, #1E1738 52px, #150F2C 58px),
+                    radial-gradient(ellipse 34px 26px at 50% 42px, #463A78 62%, rgba(0,0,0,0) 63%);
+                background-color: transparent;
+                background-size: 320px 18px, 320px 18px, 320px 11px, 320px 11px, 100% 18px, 100% 58px, 100% 58px, 96px 58px;
+                background-position: 0 24px, 0 24px, 0 31px, 0 31px, 0 40px, 0 0, 0 0, 0 0;
+                background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, no-repeat, no-repeat, repeat-x;
+            }
+            .progress-bar::after {
+                background-image:
+                    radial-gradient(1.4px 1.4px at 18% 13%, rgba(255,255,255,.95), transparent),
+                radial-gradient(1.2px 1.2px at 27% 25%, rgba(255,255,255,.85), transparent),
+                radial-gradient(1.5px 1.5px at 36% 10%, rgba(255,255,255,.95), transparent),
+                radial-gradient(1.2px 1.2px at 47% 22%, rgba(255,255,255,.8), transparent),
+                radial-gradient(1.3px 1.3px at 57% 13%, rgba(255,255,255,.95), transparent),
+                radial-gradient(1.1px 1.1px at 68% 24%, rgba(255,255,255,.75), transparent),
+                radial-gradient(1.4px 1.4px at 78% 11%, rgba(255,255,255,.95), transparent),
+                radial-gradient(1.2px 1.2px at 88% 21%, rgba(255,255,255,.8), transparent),
+                radial-gradient(1.3px 1.3px at 95% 14%, rgba(255,255,255,.9), transparent),
+                    
+                    radial-gradient(circle at 12% 18%, rgba(255,252,240,.98) 0 6px, rgba(255,246,220,.3) 7px, transparent 18px),
+                    radial-gradient(ellipse 26px 7px at 60px 12px, rgba(210,220,255,.32), transparent 70%),
+                    radial-gradient(ellipse 20px 6px at 150px 26px, rgba(210,220,255,.25), transparent 70%),
+                    radial-gradient(ellipse 30px 8px at 262px 14px, rgba(210,220,255,.28), transparent 70%);
+                background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 200px 100%, 200px 100%, 200px 100%;
+                background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            }
+        }
 
         .love-message { margin-top: 15px; font-size: 1.1rem; color: var(--rosa-fuerte); font-weight: bold; min-height: 28px; opacity: 0; }
         .love-message.show { animation: pop 0.4s forwards; }
@@ -150,6 +538,11 @@
         .debrief-wrong { color: var(--error); text-decoration: line-through; margin-bottom: 5px; }
         .debrief-right { color: var(--exito); font-weight: bold; }
 
+        @media (prefers-color-scheme: dark) {
+            .debrief-wrong { color: #FDA4AF; }
+            .debrief-right { color: #6EE7B7; }
+        }
+
         .score-circle {
             width: 140px; height: 140px; border-radius: 50%;
             border: 8px solid var(--rosa-principal); display: flex; align-items: center; justify-content: center;
@@ -157,6 +550,26 @@
             margin: 0 auto 15px auto; animation: pop 0.6s;
         }
         
+        /* Boton de sonido */
+        .btn-sonido {
+            position: fixed; top: 10px; right: 10px; z-index: 60;
+            width: 42px; height: 42px; border-radius: 50%;
+            border: 2px solid #FBCFE8;
+            background: rgba(255,255,255,.92);
+            font-size: 1.15rem; line-height: 1; cursor: pointer;
+            box-shadow: 0 4px 14px rgba(190,24,93,.22);
+            display: flex; align-items: center; justify-content: center;
+            transition: transform .15s ease, background .2s ease;
+            -webkit-appearance: none; appearance: none;
+        }
+        .btn-sonido:hover { transform: scale(1.08); background: #fff; }
+        .btn-sonido:active { transform: scale(.94); }
+        .btn-sonido.mudo { opacity: .55; }
+        @media (prefers-color-scheme: dark) {
+            .btn-sonido { background: rgba(45,55,72,.92); border-color: #4A5568;
+                          box-shadow: 0 4px 14px rgba(0,0,0,.45); }
+        }
+
         /* Custom Scrollbar for Debriefing */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
@@ -165,9 +578,20 @@
 </head>
 <body>
 
-<div class="container" id="home-screen">
-    <h1>¡Hola Mi Princesa Perfecta! 💖✈️</h1>
-    <p style="color: #718096; font-style: italic; margin-bottom: 20px;">¿Lista para tu próximo vuelo Mi Vida? ¡Confío plenamente en ti Mi Amorcito!</p>
+<div id="bg-fx" aria-hidden="true"></div>
+<button id="btn-sonido" class="btn-sonido" type="button" aria-label="Activar o silenciar el sonido" aria-pressed="false">🔊</button>
+
+
+<!-- Pantalla de despegue -->
+<div id="pantalla-despegue" class="hidden" aria-hidden="true">
+    <div class="pista-despegue"></div>
+    <div id="avion-despegue"></div>
+    <p class="texto-despegue" id="texto-despegue">Preparando tu vuelo, mi vida… 🛫</p>
+</div>
+
+<div class="container pantalla" id="home-screen">
+    <h1 id="titulo">¡Hola Mi Princesa Perfecta! <span class="latido">💖</span><span class="planita">✈️</span></h1>
+    <p style="color: var(--texto-suave); font-style: italic; margin-bottom: 20px;">¿Lista para tu próximo vuelo Mi Vida? ¡Confío plenamente en ti Mi Amorcito!</p>
     
     <div id="highscore-display" class="high-score-badge hidden">🏆 Récord en esta materia: <span id="hs-value">0</span>%</div>
 
@@ -192,6 +616,11 @@
             <input type="checkbox" id="lives-toggle" checked>
             💖 Sistema de Vidas (3 Oportunidades)
         </label>
+
+        <label class="checkbox-container">
+            <input type="checkbox" id="night-toggle">
+            🌙 Modo Noche Estrellada
+        </label>
     </div>
     
     <button class="btn" id="btn-20" onclick="initiateLoad(30)">Misión Rápida (30 Preguntas)</button>
@@ -200,13 +629,16 @@
     <p id="loading-msg" class="hidden" style="color: var(--rosa-fuerte); font-weight: bold; margin-top: 15px;">Descargando plan de vuelo... ☁️</p>
 </div>
 
-<div class="container hidden" id="quiz-screen">
+<div class="container pantalla hidden" id="quiz-screen">
     <div class="hud-top">
         <div class="lives" id="lives-display">💖💖💖</div>
         <div class="timer hidden" id="timer-display">⏱️ <span id="time-left">00:00</span></div>
     </div>
     
-    <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+    <div class="barra-via">
+        <div id="avion-progreso"></div>
+        <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+    </div>
     
     <div class="question-container" id="q-container">
         <span id="question-counter" style="font-size: 0.9rem; color: #F43F5E; font-weight: bold; letter-spacing: 1px;"></span>
@@ -220,11 +652,11 @@
     </div>
 </div>
 
-<div class="container hidden" id="result-screen">
+<div class="container pantalla hidden" id="result-screen">
     <h1 id="result-main-title">¡Misión Cumplida! 🎉</h1>
     <div class="score-circle" id="score-display">100%</div>
     <h2 id="result-title" style="color: var(--rosa-fuerte); margin-bottom: 5px;"></h2>
-    <p id="result-message" style="color: #4A5568; line-height: 1.5;"></p>
+    <p id="result-message" style="color: var(--texto-medio); line-height: 1.5;"></p>
     
     <div id="debrief-section" class="hidden">
         <h3 style="color: var(--pizarra-oscuro); text-align: left; margin-top: 25px; border-bottom: 2px solid var(--rosa-pastel); padding-bottom: 5px;">📋 Debriefing del Vuelo (A revisar)</h3>
@@ -247,6 +679,260 @@
     // Variables Timer
     let timerInterval;
     let totalSeconds = 0;
+
+    // --- Fondo tierno ---
+    function crearFondoTierno() {
+        const capa = document.getElementById('bg-fx');
+        if (!capa) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const rnd = (a, b) => a + Math.random() * (b - a);
+
+        // Auroras rosadas que se mueven suave
+        const auroras = [
+            { s: 420, x: '-12%', y: '-8%',  c: '255,117,140', d: 22 },
+            { s: 380, x: '68%',  y: '-14%', c: '213,63,140',  d: 26 },
+            { s: 460, x: '38%',  y: '62%',  c: '255,182,193', d: 30 },
+            { s: 340, x: '78%',  y: '72%',  c: '255,126,179', d: 24 }
+        ];
+        auroras.forEach((a, i) => {
+            const el = document.createElement('div');
+            el.className = 'aurora';
+            el.style.cssText = `width:${a.s}px;height:${a.s}px;left:${a.x};top:${a.y};` +
+                `background:rgba(${a.c},.55);animation-delay:${-i * 5}s;animation-duration:${a.d}s;`;
+            capa.appendChild(el);
+        });
+
+        // Nubes que cruzan el cielo
+        const nubes = ['☁️', '☁️', '🌤️', '☁️', '🌷'];
+        nubes.forEach((n, i) => {
+            const el = document.createElement('div');
+            el.className = 'nube';
+            el.textContent = n;
+            el.style.top = rnd(6, 62) + 'vh';
+            el.style.fontSize = rnd(2.2, 4) + 'rem';
+            el.style.animationDuration = rnd(55, 95) + 's';
+            el.style.animationDelay = -rnd(0, 60) + 's';
+            capa.appendChild(el);
+        });
+
+        // Destellos tipo hadita
+        for (let i = 0; i < 18; i++) {
+            const el = document.createElement('div');
+            el.className = 'destello';
+            const s = rnd(3, 9);
+            el.style.cssText = `width:${s}px;height:${s}px;left:${rnd(0, 100)}%;top:${rnd(0, 100)}%;` +
+                `animation-duration:${rnd(2.5, 6)}s;animation-delay:${-rnd(0, 6)}s;`;
+            capa.appendChild(el);
+        }
+
+        // Corazones que suben
+        const simbolos = ['💖', '💕', '💗', '🩷', '✨', '🌸', '💞'];
+        for (let i = 0; i < 26; i++) {
+            const el = document.createElement('div');
+            el.className = 'corazon';
+            el.textContent = simbolos[i % simbolos.length];
+            el.style.left = rnd(0, 97) + '%';
+            el.style.fontSize = rnd(0.9, 2.1) + 'rem';
+            el.style.animationDuration = rnd(11, 22) + 's';
+            el.style.animationDelay = -rnd(0, 22) + 's';
+            el.style.setProperty('--vaiven', rnd(20, 90) + 'px');
+            capa.appendChild(el);
+        }
+    }
+    window.addEventListener('load', crearFondoTierno);
+
+    // --- El Airbus A320 de la casa ---
+    // --- A320 oficial de Airbus (dibujo tecnico) pintado en rosa ---
+
+
+    // El avion se toma del repositorio; si no hay conexion, cae al archivo local.
+    const URL_AVION = 'https://raw.githubusercontent.com/data-phantom-x/Prueba-para-Mi-Prometida/refs/heads/main/A320.svg';
+    const AVION_LOCAL = 'A320-librea.svg';
+    try { const _precarga = new Image(); _precarga.src = URL_AVION; } catch (e) {}
+
+    function capasA320() {
+        return '<img class="a320" src="' + URL_AVION + '" alt="Avion A320" draggable="false"' +
+               ' onerror="this.onerror=null;this.src=\'' + AVION_LOCAL + '\'">';
+    }
+
+    function pintarA320() {
+        const grande = document.getElementById('avion-despegue');
+        const chico = document.getElementById('avion-progreso');
+        if (grande) grande.innerHTML = capasA320();
+        if (chico) chico.innerHTML = capasA320();
+    }
+
+    // --- Transiciones suaves entre pantallas ---
+    let pantallaActual = document.getElementById('home-screen');
+    let tokenPantalla = 0;
+
+    function mostrarPantalla(destino) {
+        destino.classList.remove('hidden', 'entrando');
+        void destino.offsetWidth;
+        destino.classList.add('entrando');
+        requestAnimationFrame(() => requestAnimationFrame(() => destino.classList.remove('entrando')));
+    }
+
+    function irA(id) {
+        const destino = document.getElementById(id);
+        if (!destino) return;
+        const miToken = ++tokenPantalla;
+        const previo = pantallaActual;
+        if (previo && previo !== destino) previo.classList.add('saliendo');
+        pantallaActual = destino;
+        if (previo === destino) { mostrarPantalla(destino); return; }
+        setTimeout(() => {
+            if (miToken !== tokenPantalla) {
+                if (previo) { previo.classList.add('hidden'); previo.classList.remove('saliendo'); }
+                return;
+            }
+            if (previo) { previo.classList.add('hidden'); previo.classList.remove('saliendo'); }
+            mostrarPantalla(destino);
+        }, 420);
+    }
+
+    // --- Pantalla de despegue ---
+    function mostrarDespegue() {
+        const d = document.getElementById('pantalla-despegue');
+        if (!d) return;
+        d.innerHTML = '<div class="pista-despegue"></div><div id="avion-despegue"></div>' +
+                      '<p class="texto-despegue">Preparando tu vuelo, mi vida… 🛫</p>';
+        pintarA320();
+        sonidoDespegue();
+        for (let i = 0; i < 5; i++) {
+            const n = document.createElement('div');
+            n.className = 'nubecita';
+            n.textContent = '☁️';
+            n.style.top = (Math.random() * 60) + '%';
+            n.style.fontSize = (2 + Math.random() * 3) + 'rem';
+            n.style.animationDuration = (7 + Math.random() * 8) + 's';
+            n.style.animationDelay = (-Math.random() * 10) + 's';
+            d.appendChild(n);
+        }
+        d.classList.remove('hidden');
+    }
+    function ocultarDespegue() {
+        const d = document.getElementById('pantalla-despegue');
+        if (d) d.classList.add('hidden');
+    }
+    const esperar = ms => new Promise(r => setTimeout(r, ms));
+
+    // --- Explosión de corazones / destellos ---
+    function detonar(x, y, simbolos, cantidad) {
+        const capa = document.getElementById('bg-fx');
+        if (!capa) return;
+        for (let i = 0; i < cantidad; i++) {
+            const e = document.createElement('div');
+            e.className = 'detonador';
+            e.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+            e.style.left = x + 'px';
+            e.style.top = y + 'px';
+            const ang = (Math.PI * 2 / cantidad) * i + Math.random() * 0.7;
+            const dist = 70 + Math.random() * 120;
+            e.style.setProperty('--dx', Math.cos(ang) * dist + 'px');
+            e.style.setProperty('--dy', (Math.sin(ang) * dist - 40) + 'px');
+            e.style.setProperty('--rot', (Math.random() * 720 - 360) + 'deg');
+            e.style.fontSize = (0.9 + Math.random() * 1.2) + 'rem';
+            e.style.animationDelay = (Math.random() * 0.12) + 's';
+            capa.appendChild(e);
+            setTimeout(() => e.remove(), 1200);
+        }
+    }
+    function detonarEn(elemento, simbolos, cantidad) {
+        if (!elemento) return;
+        const r = elemento.getBoundingClientRect();
+        detonar(r.left + r.width / 2, r.top + r.height / 2, simbolos, cantidad);
+    }
+
+    // --- Celebración de resultados ---
+    function celebrar(porcentaje) {
+        const capa = document.getElementById('bg-fx');
+        if (!capa) return;
+        let simbolos = ['✨', '🌸', '💗'];
+        let cantidad = 26;
+        if (porcentaje >= 100) { simbolos = ['💖', '💕', '✨', '🌸', '💗', '🩷']; cantidad = 46; }
+        else if (porcentaje >= 80) { simbolos = ['🎈', '💗', '✨', '🌸']; cantidad = 32; }
+        for (let i = 0; i < cantidad; i++) {
+            const e = document.createElement('div');
+            e.className = 'confeti';
+            e.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+            e.style.left = Math.random() * 96 + '%';
+            e.style.fontSize = (1.1 + Math.random() * 1.5) + 'rem';
+            e.style.animationDuration = (3.5 + Math.random() * 3.5) + 's';
+            e.style.animationDelay = (Math.random() * 1.6) + 's';
+            capa.appendChild(e);
+            setTimeout(() => e.remove(), 8000);
+        }
+    }
+
+    // --- Modo noche estrellada ---
+    function crearEstrellas() {
+        const capa = document.getElementById('bg-fx');
+        if (!capa) return;
+        const rnd = (a, b) => a + Math.random() * (b - a);
+        const luna = document.createElement('div');
+        luna.className = 'luna';
+        luna.textContent = '🌙';
+        luna.style.top = '8vh';
+        luna.style.right = '9vw';
+        capa.appendChild(luna);
+        for (let i = 0; i < 70; i++) {
+            const s = rnd(1.5, 4);
+            const e = document.createElement('div');
+            e.className = 'estrella';
+            e.style.cssText = `width:${s}px;height:${s}px;left:${rnd(0, 100)}%;top:${rnd(0, 100)}%;` +
+                `animation-duration:${rnd(2, 7)}s;animation-delay:${-rnd(0, 6)}s;`;
+            capa.appendChild(e);
+        }
+    }
+    function aplicarNoche(activo) {
+        document.body.classList.toggle('noche', activo);
+        const c = document.getElementById('night-toggle');
+        if (c) c.checked = activo;
+        try { localStorage.setItem('TCP_noche', activo ? '1' : '0'); } catch (e) {}
+    }
+
+    // --- Título letra a letra ---
+    function animarTitulo() {
+        const h = document.getElementById('titulo');
+        if (!h || h.dataset.animado) return;
+        h.dataset.animado = '1';
+        let i = 0;
+        Array.from(h.childNodes).forEach(nodo => {
+            if (nodo.nodeType === 3) {
+                const texto = nodo.textContent;
+                const frag = document.createDocumentFragment();
+                texto.split('').forEach(ch => {
+                    const s = document.createElement('span');
+                    s.className = 'letra';
+                    s.textContent = ch;
+                    s.style.animationDelay = (i++ * 0.035) + 's';
+                    frag.appendChild(s);
+                });
+                nodo.parentNode.replaceChild(frag, nodo);
+            }
+        });
+    }
+
+    // --- Estela de corazones con el cursor / dedo ---
+    let ultimaEstela = 0;
+    const SIMBOLOS_ESTELA = ['💕', '💖', '✨', '🌸', '💗'];
+    function soltarEstela(x, y) {
+        const ahora = Date.now();
+        if (ahora - ultimaEstela < 70) return;
+        ultimaEstela = ahora;
+        const capa = document.getElementById('bg-fx');
+        if (!capa) return;
+        const e = document.createElement('div');
+        e.className = 'estela';
+        e.textContent = SIMBOLOS_ESTELA[Math.floor(Math.random() * SIMBOLOS_ESTELA.length)];
+        e.style.left = x + 'px';
+        e.style.top = y + 'px';
+        e.style.fontSize = (0.7 + Math.random() * 0.9) + 'rem';
+        capa.appendChild(e);
+        setTimeout(() => e.remove(), 1000);
+    }
 
     let correctPhrases = [];
     let incorrectPhrases = [];
@@ -330,6 +1016,148 @@
         } catch(e) {}
     }
 
+
+    // ================= Motor de despegue sintetizado =================
+    let sonidoMute = false;
+    try { sonidoMute = localStorage.getItem('TCP_mute') === '1'; } catch (e) {}
+    let nodosDespegue = [];
+
+    function pintarBotonSonido() {
+        const b = document.getElementById('btn-sonido');
+        if (!b) return;
+        b.textContent = sonidoMute ? '\u{1F507}' : '\u{1F50A}';
+        b.classList.toggle('mudo', sonidoMute);
+        b.setAttribute('aria-pressed', String(sonidoMute));
+    }
+    document.addEventListener('DOMContentLoaded', pintarBotonSonido);
+    document.addEventListener('click', (ev) => {
+        const b = ev.target.closest && ev.target.closest('#btn-sonido');
+        if (!b) return;
+        sonidoMute = !sonidoMute;
+        try { localStorage.setItem('TCP_mute', sonidoMute ? '1' : '0'); } catch (e) {}
+        pintarBotonSonido();
+        if (!sonidoMute) clickPop();
+    });
+
+    function ruidoRosa(ctx, segundos) {
+        const largo = Math.ceil(ctx.sampleRate * segundos);
+        const buf = ctx.createBuffer(1, largo, ctx.sampleRate);
+        const ch = buf.getChannelData(0);
+        let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+        for (let i = 0; i < largo; i++) {
+            const w = Math.random() * 2 - 1;
+            b0 = 0.99886 * b0 + w * 0.0555179;
+            b1 = 0.99332 * b1 + w * 0.0750759;
+            b2 = 0.96900 * b2 + w * 0.1538520;
+            b3 = 0.86650 * b3 + w * 0.3104856;
+            b4 = 0.55000 * b4 + w * 0.5329522;
+            b5 = -0.7616 * b5 - w * 0.0168980;
+            b6 = w * 0.115926;
+            ch[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6) * 0.10;
+        }
+        return buf;
+    }
+
+    function sonidoDespegue() {
+        if (sonidoMute) return;
+        try {
+            const ctx = getAudioCtx();
+            if (ctx.state === 'suspended') ctx.resume();
+            nodosDespegue.forEach(x => { try { x.stop(); } catch (e) {} });
+            nodosDespegue = [];
+            const t0 = ctx.currentTime + 0.04;
+            const DUR = 5.0;
+            const buf = ruidoRosa(ctx, DUR + 0.3);
+
+            const master = ctx.createGain();
+            master.gain.setValueAtTime(0.0001, t0);
+            master.gain.linearRampToValueAtTime(0.26, t0 + 0.8);
+            master.gain.linearRampToValueAtTime(0.40, t0 + 2.9);
+            master.gain.linearRampToValueAtTime(0.30, t0 + 3.7);
+            master.gain.exponentialRampToValueAtTime(0.0001, t0 + DUR);
+            master.connect(ctx.destination);
+
+            // 1) retumbo grave de los motores
+            const srcR = ctx.createBufferSource(); srcR.buffer = buf; srcR.loop = true;
+            const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.Q.value = 0.9;
+            lp.frequency.setValueAtTime(105, t0);
+            lp.frequency.linearRampToValueAtTime(300, t0 + 2.9);
+            lp.frequency.linearRampToValueAtTime(430, t0 + 4.1);
+            const gR = ctx.createGain();
+            gR.gain.setValueAtTime(0.10, t0);
+            gR.gain.linearRampToValueAtTime(0.90, t0 + 2.9);
+            gR.gain.linearRampToValueAtTime(0.68, t0 + 4.3);
+            srcR.connect(lp); lp.connect(gR); gR.connect(master);
+
+            // 2) silbido de la turbina (banda que sube con la velocidad)
+            const srcT = ctx.createBufferSource(); srcT.buffer = buf; srcT.loop = true;
+            const bp = ctx.createBiquadFilter(); bp.type = 'bandpass'; bp.Q.value = 7;
+            bp.frequency.setValueAtTime(430, t0);
+            bp.frequency.exponentialRampToValueAtTime(1500, t0 + 2.9);
+            bp.frequency.exponentialRampToValueAtTime(2350, t0 + 4.2);
+            const gT = ctx.createGain();
+            gT.gain.setValueAtTime(0.015, t0);
+            gT.gain.linearRampToValueAtTime(0.26, t0 + 2.2);
+            gT.gain.linearRampToValueAtTime(0.40, t0 + 3.0);
+            gT.gain.exponentialRampToValueAtTime(0.0001, t0 + DUR);
+            srcT.connect(bp); bp.connect(gT); gT.connect(master);
+
+            // 3) tono agudo del fan
+            const osc = ctx.createOscillator(); osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(300, t0);
+            osc.frequency.exponentialRampToValueAtTime(980, t0 + 2.9);
+            osc.frequency.exponentialRampToValueAtTime(1520, t0 + 4.2);
+            const lp2 = ctx.createBiquadFilter(); lp2.type = 'lowpass'; lp2.frequency.value = 3400;
+            const gO = ctx.createGain();
+            gO.gain.setValueAtTime(0.0001, t0);
+            gO.gain.linearRampToValueAtTime(0.028, t0 + 2.4);
+            gO.gain.linearRampToValueAtTime(0.042, t0 + 3.0);
+            gO.gain.exponentialRampToValueAtTime(0.0001, t0 + DUR);
+            osc.connect(lp2); lp2.connect(gO); gO.connect(master);
+
+            // 4) viento y rodadura
+            const srcV = ctx.createBufferSource(); srcV.buffer = buf; srcV.loop = true;
+            const hp = ctx.createBiquadFilter(); hp.type = 'bandpass'; hp.Q.value = 0.7;
+            hp.frequency.setValueAtTime(700, t0);
+            hp.frequency.linearRampToValueAtTime(2700, t0 + 3.0);
+            const gV = ctx.createGain();
+            gV.gain.setValueAtTime(0.0001, t0);
+            gV.gain.linearRampToValueAtTime(0.05, t0 + 1.2);
+            gV.gain.linearRampToValueAtTime(0.19, t0 + 2.9);
+            gV.gain.linearRampToValueAtTime(0.34, t0 + 3.9);
+            gV.gain.exponentialRampToValueAtTime(0.0001, t0 + DUR);
+            srcV.connect(hp); hp.connect(gV); gV.connect(master);
+
+            nodosDespegue = [srcR, srcT, srcV, osc];
+            nodosDespegue.forEach(x => { x.start(t0); x.stop(t0 + DUR + 0.1); });
+
+            // 5) golpe de rotacion (2.9 s) + whoosh
+            const oR = ctx.createOscillator(); oR.type = 'sine';
+            oR.frequency.setValueAtTime(190, t0 + 2.85);
+            oR.frequency.exponentialRampToValueAtTime(58, t0 + 3.7);
+            const gRo = ctx.createGain();
+            gRo.gain.setValueAtTime(0.0001, t0 + 2.85);
+            gRo.gain.linearRampToValueAtTime(0.11, t0 + 2.95);
+            gRo.gain.exponentialRampToValueAtTime(0.0001, t0 + 3.9);
+            oR.connect(gRo); gRo.connect(master);
+            oR.start(t0 + 2.85); oR.stop(t0 + 4.0);
+            nodosDespegue.push(oR);
+
+            // 6) latido de avion al despegar
+            [1.05, 1.3, 1.55].forEach((f, i) => {
+                const o = ctx.createOscillator(), g = ctx.createGain();
+                o.type = 'sine'; o.frequency.value = f;
+                const s = t0 + 2.95 + i * 0.09;
+                g.gain.setValueAtTime(0, s);
+                g.gain.linearRampToValueAtTime(0.045, s + 0.012);
+                g.gain.exponentialRampToValueAtTime(0.0001, s + 0.34);
+                o.connect(g); g.connect(master);
+                o.start(s); o.stop(s + 0.4);
+                nodosDespegue.push(o);
+            });
+        } catch (e) {}
+    }
+
     function gameOverSound() {
         try {
             const ctx = getAudioCtx(), t = ctx.currentTime;
@@ -371,8 +1199,43 @@
         } catch(e) {}
     }
 
-    function randPhrase(arr) {
-        return arr[Math.floor(Math.random() * arr.length)];
+    const FRASES_POR_DEFECTO = {
+        correctas: ['¡Muy bien mi vida! 💖', '¡Lo clavaste, mi amor! ✨', '¡Perfecto! 💕',
+                    '¡Esa es mi niña! 🌸', '¡Impecable! 🩷', '¡Bravo, mi princesa! 💗'],
+        incorrectas: ['Casi, mi vida 💕', 'No era esa, mi amor 💔', '¡Ahora sí! Estúdialo un poquito más 📖',
+                       'Respira y sigue, mi vida 🌸', 'Aquí se aprende, mi amor ✨'],
+        resultado: {
+            perfecto: {
+                titulos: ['¡Misión perfecta! 🏆', '¡Impecable, mi amor! 💖', '¡Puntaje de campeona! 👑'],
+                mensajes: ['Le atinaste a todas, mi vida. ¡Te mereces un abrazo gigante! 🤗',
+                           'Perfecto de pies a cabeza. Estoy tan orgulloso de ti 💕',
+                           'Así se vuela, princesa. ¡Lo lograste! ✈️💖']
+            },
+            excelente: {
+                titulos: ['¡Excelente vuelo! ✈️', '¡Casi perfecta, mi vida! 💕', '¡Muy bien, mi amor! 🌸'],
+                mensajes: ['Casi perfecta, mi vida. Un repaso más y la pegas seguro 💖',
+                           'Volaste genial, mi amor. Súmele un poquito de estudio y llegas al 100 ✨',
+                           'Muy buen vuelo. Estoy feliz contigo 💕']
+            },
+            regular: {
+                titulos: ['¡Seguimos practicando! 📖', 'Buen intento, mi vida 💕', 'Casi lo tienes, mi amor 🌸'],
+                mensajes: ['Repasa el debriefing con calma, mi vida. Tú puedes con todo 💖',
+                           'Cada intento te hace mejor. Vuelve a intentarlo, mi amor ✨',
+                           'Necesitas un poco más de estudio, mi vida. ¡Ánimo! 💕']
+            },
+            abortada: {
+                titulos: ['Volvamos a la base ☁️', 'Se acabó la misión 💔', 'Volvemos a intentarlo 💕'],
+                mensajes: ['No pasa nada mi vida, descansemos y volvemos a intentarlo 💖',
+                           'Respira, mi amor. Cada intento suma ✨',
+                           'Volvemos a la base y lo intentamos de nuevo 💕']
+            }
+        }
+    };
+
+    function randPhrase(arr, porDefecto) {
+        const lista = (arr && arr.length) ? arr : (porDefecto || []);
+        if (!lista.length) return '';
+        return lista[Math.floor(Math.random() * lista.length)];
     }
 
     function normalizeQuestions(data) {
@@ -390,7 +1253,22 @@
     }
 
     // --- AL INICIAR ---
-    window.onload = () => { updateHighScoreDisplay(); loadPhrases(); }
+    window.onload = () => {
+        pintarA320();
+        animarTitulo();
+        crearEstrellas();
+        let nocheGuardada = false;
+        try { nocheGuardada = localStorage.getItem('TCP_noche') === '1'; } catch (e) {}
+        aplicarNoche(nocheGuardada);
+        const chk = document.getElementById('night-toggle');
+        if (chk) chk.addEventListener('change', () => aplicarNoche(chk.checked));
+        document.addEventListener('mousemove', ev => soltarEstela(ev.clientX, ev.clientY), { passive: true });
+        document.addEventListener('touchstart', ev => {
+            if (ev.touches[0]) soltarEstela(ev.touches[0].clientX, ev.touches[0].clientY);
+        }, { passive: true });
+        updateHighScoreDisplay();
+        loadPhrases();
+    }
 
     function updateHighScoreDisplay() {
         const select = document.getElementById('subject-selector');
@@ -416,15 +1294,23 @@
         let subjectUrl = document.getElementById('subject-selector').value;
         subjectUrl = subjectUrl.replace("/refs/heads/", "/");
 
+        mostrarDespegue();
+
         try {
-            const response = await fetch(subjectUrl);
-            if (!response.ok) throw new Error(`Error de red HTTP: ${response.status}`);
-            
-            const data = await response.json();
+            const carga = (async () => {
+                const response = await fetch(subjectUrl);
+                if (!response.ok) throw new Error(`Error de red HTTP: ${response.status}`);
+                const data = await response.json();
+                return data;
+            })();
+            const [data] = await Promise.all([carga, esperar(4800)]);
+
             currentBank = normalizeQuestions(data);
-            startQuiz(numQuestions); 
+            ocultarDespegue();
+            startQuiz(numQuestions);
 
         } catch (error) {
+            ocultarDespegue();
             console.error("DIAGNÓSTICO DE ERROR:", error);
             let mensajeError = "Error de conexión al cargar la materia.";
             if (error.message.includes("JSON") || error.message.includes("Unexpected token")) {
@@ -472,8 +1358,7 @@
             document.getElementById('timer-display').classList.add('hidden');
         }
 
-        document.getElementById('home-screen').classList.add('hidden');
-        document.getElementById('quiz-screen').classList.remove('hidden');
+        irA('quiz-screen');
         
         loadQuestion();
     }
@@ -521,6 +1406,8 @@
         });
 
         document.getElementById('progress').style.width = `${(currentIndex / sessionQuestions.length) * 100}%`;
+        const avion = document.getElementById('avion-progreso');
+        if (avion) avion.style.left = (12 + (currentIndex / sessionQuestions.length) * 76) + '%';
         document.getElementById('next-btn').classList.add('hidden');
         document.getElementById('love-message').classList.remove('show');
     }
@@ -536,12 +1423,15 @@
             correctChime();
             btnElement.classList.add('correct');
             score++;
-            loveMsg.innerText = randPhrase(correctPhrases);
+            detonarEn(btnElement, ['💖', '💕', '✨', '🌸'], 14);
+            loveMsg.innerText = randPhrase(correctPhrases, FRASES_POR_DEFECTO.correctas);
             loveMsg.style.color = 'var(--rosa-fuerte)';
         } else {
             incorrectBoop();
-            btnElement.classList.add('incorrect');
-            options[correctIndex].classList.add('correct');
+            btnElement.classList.add('incorrect', 'sacudida');
+            setTimeout(() => btnElement.classList.remove('sacudida'), 550);
+            detonarEn(btnElement, ['💔'], 3);
+            if (options[correctIndex]) options[correctIndex].classList.add('correct');
             
             mistakes.push({ 
                 q: qData.q, 
@@ -552,7 +1442,7 @@
             if (useLives) {
                 lives--;
                 updateLivesUI();
-                loveMsg.innerText = randPhrase(incorrectPhrases);
+                loveMsg.innerText = randPhrase(incorrectPhrases, FRASES_POR_DEFECTO.incorrectas);
                 loveMsg.style.color = 'var(--pizarra-oscuro)';
 
                 if (lives <= 0) {
@@ -560,7 +1450,7 @@
                     return;
                 }
             } else {
-                loveMsg.innerText = randPhrase(incorrectPhrases);
+                loveMsg.innerText = randPhrase(incorrectPhrases, FRASES_POR_DEFECTO.incorrectas);
                 loveMsg.style.color = 'var(--pizarra-oscuro)';
             }
         }
@@ -588,11 +1478,11 @@
     // --- FIN DEL JUEGO Y DEBRIEFING ---
     function endGame(completed, abortMessage) {
         clearInterval(timerInterval);
-        document.getElementById('quiz-screen').classList.add('hidden');
-        document.getElementById('result-screen').classList.remove('hidden');
-        
+        irA('result-screen');
+
         const percentage = Math.round((score / sessionQuestions.length) * 100);
         document.getElementById('score-display').innerText = `${percentage}%`;
+        celebrar(percentage);
         
         const titleText = document.getElementById('result-title');
         const msgText = document.getElementById('result-message');
@@ -600,7 +1490,7 @@
 
         if (!completed) {
             gameOverSound();
-            const rp = resultPhrases.abortada || {};
+            const rp = resultPhrases.abortada || FRASES_POR_DEFECTO.resultado.abortada;
             mainTitle.innerText = randPhrase(rp.titulos || []);
             titleText.innerText = abortMessage;
             msgText.innerText = randPhrase(rp.mensajes || []);
@@ -621,7 +1511,7 @@
             else if (percentage >= 80) categoria = "excelente";
             else categoria = "regular";
 
-            const rp = resultPhrases[categoria] || {};
+            const rp = resultPhrases[categoria] || FRASES_POR_DEFECTO.resultado[categoria] || {};
             titleText.innerText = randPhrase(rp.titulos || []);
             msgText.innerText = randPhrase(rp.mensajes || []);
         }
@@ -642,3 +1532,4 @@
         }
     }
 </script>
+</body>
