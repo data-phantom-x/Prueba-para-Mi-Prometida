@@ -37,7 +37,7 @@
             "Variables y en equilibrio.",
             "Constantes, pero en desequilibrio."
         ],
-        "answer": 2
+        "answer": 1
     },
     {
         "q": "El ángulo formado por el norte verdadero y el norte magnético se llama:",
@@ -227,7 +227,7 @@
             "Si el huso horario es positivo o negativo a UTC se suma.",
             "Ninguna es correcta."
         ],
-        "answer": 1
+        "answer": 0
     },
     {
         "q": "¿Qué es la inversión térmica?",
@@ -307,7 +307,7 @@
             "Latitud este u oeste y longitud norte o sur.",
             "Todas las anteriores son incorrectas."
         ],
-        "answer": 1
+        "answer": 0
     },
     {
         "q": "Las líneas que en una carta meteorológica unen puntos de igual presión atmosférica se llaman:",
